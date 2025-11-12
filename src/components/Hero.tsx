@@ -38,14 +38,19 @@ const Hero = () => {
               >
                 View My Work
               </Button>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow"
-                onClick={() => window.open('/DhruvGahtori_Resume.pdf', '_blank')}
+              <a
+                href="/DhruvGahtori_Resume.pdf"
+                download="DhruvGahtori_Resume.pdf"
+                className="inline-block"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                </Button>
+              </a>
               <Button
                 size="lg"
                 variant="outline"
