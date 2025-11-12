@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 
@@ -37,6 +37,14 @@ const Hero = () => {
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow"
+                onClick={() => window.open('/DhruvGahtori_Resume.pdf', '_blank')}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
               </Button>
               <Button
                 size="lg"
