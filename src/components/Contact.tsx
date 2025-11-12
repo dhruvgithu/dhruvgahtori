@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Phone, Download } from "lucide-react";
+import { Mail, Linkedin, Github, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -125,14 +125,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            <Button
-              className="w-full bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold py-6 rounded-full glow"
-              onClick={() => window.open('/DhruvGahtori_Resume.pdf', '_blank')}
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </Button>
           </div>
         </div>
       </div>
