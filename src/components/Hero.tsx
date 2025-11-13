@@ -16,11 +16,6 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in-up">
-            <div className="mb-6">
-              <span className="text-accent text-lg font-semibold tracking-wider uppercase">
-                Welcome to my portfolio
-              </span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Hi, I'm <span className="gradient-text">Dhruv Gahtori</span>
             </h1>
