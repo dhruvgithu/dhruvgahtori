@@ -7,9 +7,18 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl -top-20 -left-20 animate-float" />
-        <div className="absolute w-96 h-96 bg-secondary/20 rounded-full blur-3xl top-1/2 -right-20 animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl -bottom-20 left-1/2 animate-float" style={{ animationDelay: '4s' }} />
+        {/* Main gradient orbs with higher opacity */}
+        <div className="absolute w-[500px] h-[500px] bg-primary/40 rounded-full blur-3xl -top-20 -left-20 animate-float" />
+        <div className="absolute w-[600px] h-[600px] bg-secondary/35 rounded-full blur-3xl top-1/2 -right-20 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute w-[550px] h-[550px] bg-accent/40 rounded-full blur-3xl -bottom-20 left-1/2 animate-float" style={{ animationDelay: '4s' }} />
+        
+        {/* Additional colorful orbs for more vibrancy */}
+        <div className="absolute w-[400px] h-[400px] bg-[hsl(320,70%,60%)]/30 rounded-full blur-3xl top-1/4 left-1/4 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute w-[450px] h-[450px] bg-[hsl(240,80%,65%)]/25 rounded-full blur-3xl bottom-1/4 right-1/3 animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute w-[350px] h-[350px] bg-[hsl(180,70%,55%)]/30 rounded-full blur-3xl top-1/3 right-1/4 animate-float" style={{ animationDelay: '5s' }} />
+        
+        {/* Gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
