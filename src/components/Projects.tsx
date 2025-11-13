@@ -75,7 +75,7 @@ const Projects = () => {
                   variant="outline"
                   size="sm"
                   className="border-primary text-foreground hover:bg-primary/10"
-                  onClick={() => window.open('https://github.com/dhruvgahtori', '_blank')}
+                  onClick={() => window.open('https://github.com/dhruvgithu', '_blank')}
                 >
                   <Github className="w-4 h-4 mr-2" />
                   View on GitHub
