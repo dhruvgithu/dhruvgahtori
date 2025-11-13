@@ -2,8 +2,20 @@ import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
@@ -11,22 +23,43 @@ const Hero = () => {
         {/* Particle animation layer */}
         <ParticleBackground />
         
-        {/* Main gradient orbs with higher opacity */}
-        <div className="absolute w-[500px] h-[500px] bg-primary/40 rounded-full blur-3xl -top-20 -left-20 animate-float" />
-        <div className="absolute w-[600px] h-[600px] bg-secondary/35 rounded-full blur-3xl top-1/2 -right-20 animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute w-[550px] h-[550px] bg-accent/40 rounded-full blur-3xl -bottom-20 left-1/2 animate-float" style={{ animationDelay: '4s' }} />
+        {/* Main gradient orbs with higher opacity and parallax */}
+        <div 
+          className="absolute w-[500px] h-[500px] bg-primary/40 rounded-full blur-3xl -top-20 -left-20 animate-float transition-transform duration-75" 
+          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+        />
+        <div 
+          className="absolute w-[600px] h-[600px] bg-secondary/35 rounded-full blur-3xl top-1/2 -right-20 animate-float transition-transform duration-75" 
+          style={{ animationDelay: '2s', transform: `translateY(${scrollY * 0.3}px)` }}
+        />
+        <div 
+          className="absolute w-[550px] h-[550px] bg-accent/40 rounded-full blur-3xl -bottom-20 left-1/2 animate-float transition-transform duration-75" 
+          style={{ animationDelay: '4s', transform: `translateY(${scrollY * 0.4}px)` }}
+        />
         
-        {/* Additional colorful orbs for more vibrancy */}
-        <div className="absolute w-[400px] h-[400px] bg-[hsl(320,70%,60%)]/30 rounded-full blur-3xl top-1/4 left-1/4 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute w-[450px] h-[450px] bg-[hsl(240,80%,65%)]/25 rounded-full blur-3xl bottom-1/4 right-1/3 animate-float" style={{ animationDelay: '3s' }} />
-        <div className="absolute w-[350px] h-[350px] bg-[hsl(180,70%,55%)]/30 rounded-full blur-3xl top-1/3 right-1/4 animate-float" style={{ animationDelay: '5s' }} />
+        {/* Additional colorful orbs for more vibrancy with parallax */}
+        <div 
+          className="absolute w-[400px] h-[400px] bg-[hsl(320,70%,60%)]/30 rounded-full blur-3xl top-1/4 left-1/4 animate-float transition-transform duration-75" 
+          style={{ animationDelay: '1s', transform: `translateY(${scrollY * 0.6}px)` }}
+        />
+        <div 
+          className="absolute w-[450px] h-[450px] bg-[hsl(240,80%,65%)]/25 rounded-full blur-3xl bottom-1/4 right-1/3 animate-float transition-transform duration-75" 
+          style={{ animationDelay: '3s', transform: `translateY(${scrollY * 0.35}px)` }}
+        />
+        <div 
+          className="absolute w-[350px] h-[350px] bg-[hsl(180,70%,55%)]/30 rounded-full blur-3xl top-1/3 right-1/4 animate-float transition-transform duration-75" 
+          style={{ animationDelay: '5s', transform: `translateY(${scrollY * 0.45}px)` }}
+        />
         
         {/* Gradient overlay for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div 
+          className="flex flex-col lg:flex-row items-center justify-between gap-12"
+          style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+        >
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
