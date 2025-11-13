@@ -1,12 +1,16 @@
 import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
+import ParticleBackground from "./ParticleBackground";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Particle animation layer */}
+        <ParticleBackground />
+        
         {/* Main gradient orbs with higher opacity */}
         <div className="absolute w-[500px] h-[500px] bg-primary/40 rounded-full blur-3xl -top-20 -left-20 animate-float" />
         <div className="absolute w-[600px] h-[600px] bg-secondary/35 rounded-full blur-3xl top-1/2 -right-20 animate-float" style={{ animationDelay: '2s' }} />
