@@ -1,6 +1,7 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import anprOutput from "@/assets/anpr-output.png";
+import salesForecast from "@/assets/sales-forecast.png";
 
 const Projects = () => {
   const projects = [
@@ -28,6 +29,7 @@ const Projects = () => {
       description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       gradient: "from-primary via-accent to-secondary",
+      image: salesForecast,
     },
   ];
 
