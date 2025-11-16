@@ -1,5 +1,6 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
+import anprOutput from "@/assets/anpr-output.png";
 
 const Projects = () => {
   const projects = [
@@ -8,6 +9,7 @@ const Projects = () => {
       description: "Built using Python and OpenCV for real-time vehicle detection and license plate extraction with Haar Cascade Algorithm and OCR.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
       gradient: "from-primary to-secondary",
+      image: anprOutput,
     },
     {
       title: "Multiple Disease Prediction System",
@@ -58,6 +60,17 @@ const Projects = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 {project.description}
               </p>
+              
+              {project.image && (
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold mb-3 text-primary">Output Screenshot</h4>
+                  <img 
+                    src={project.image} 
+                    alt={`${project.title} output screenshot`}
+                    className="w-full rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
+                  />
+                </div>
+              )}
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIndex) => (
