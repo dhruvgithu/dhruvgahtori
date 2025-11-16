@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import anprOutput from "@/assets/anpr-output.png";
 import salesForecast from "@/assets/sales-forecast.png";
 import diseasePrediction from "@/assets/disease-prediction.png";
+import churnPrediction from "@/assets/churn-prediction.png";
 
 const Projects = () => {
   const projects = [
@@ -25,6 +26,7 @@ const Projects = () => {
       description: "Developed a system to identify customers likely to stop using a service. Achieved around 85% accuracy through hyperparameter tuning.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       gradient: "from-accent to-primary",
+      image: churnPrediction,
     },
     {
       title: "Sales Forecasting using Predictive Analytics",
