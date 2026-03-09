@@ -77,6 +77,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="name"
+                  name="from_name"
                   type="text"
                   placeholder="Your Name"
                   required
