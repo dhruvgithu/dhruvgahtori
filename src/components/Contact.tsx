@@ -90,6 +90,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="from_email"
                   type="email"
                   placeholder="your.email@example.com"
                   required
