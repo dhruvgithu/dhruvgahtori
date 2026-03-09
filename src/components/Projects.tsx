@@ -67,16 +67,6 @@ const Projects = () => {
                 {project.description}
               </p>
               
-              {project.image && (
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold mb-3 text-primary">Output Screenshot</h4>
-                  <img 
-                    src={project.image} 
-                    alt={`${project.title} output screenshot`}
-                    className="w-full rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
-                  />
-                </div>
-              )}
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIndex) => (
