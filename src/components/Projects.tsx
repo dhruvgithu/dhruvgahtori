@@ -29,7 +29,7 @@ const Projects = () => {
       description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       gradient: "from-primary via-accent to-secondary",
-      image: salesForecast,
+      
     },
   ];
 
