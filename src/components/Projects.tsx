@@ -1,9 +1,5 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
-import anprOutput from "@/assets/anpr-output.png";
-import salesForecast from "@/assets/sales-forecast.png";
-import diseasePrediction from "@/assets/disease-prediction.png";
-import churnPrediction from "@/assets/churn-prediction.png";
 
 const Projects = () => {
   const projects = [
@@ -12,28 +8,28 @@ const Projects = () => {
       description: "Built using Python and OpenCV for real-time vehicle detection and license plate extraction with Haar Cascade Algorithm and OCR.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
       gradient: "from-primary to-secondary",
-      image: anprOutput,
+      
     },
     {
       title: "Multiple Disease Prediction System",
       description: "Machine Learning-based web application using TensorFlow and Scikit-learn for early diagnosis of diseases with <2 sec latency.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       gradient: "from-secondary to-accent",
-      image: diseasePrediction,
+      
     },
     {
       title: "Customer Churn Prediction System",
       description: "Developed a system to identify customers likely to stop using a service. Achieved around 85% accuracy through hyperparameter tuning.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       gradient: "from-accent to-primary",
-      image: churnPrediction,
+      
     },
     {
       title: "Sales Forecasting using Predictive Analytics",
       description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       gradient: "from-primary via-accent to-secondary",
-      image: salesForecast,
+      
     },
   ];
 
@@ -67,16 +63,6 @@ const Projects = () => {
                 {project.description}
               </p>
               
-              {project.image && (
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold mb-3 text-primary">Output Screenshot</h4>
-                  <img 
-                    src={project.image} 
-                    alt={`${project.title} output screenshot`}
-                    className="w-full rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
-                  />
-                </div>
-              )}
               
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIndex) => (
