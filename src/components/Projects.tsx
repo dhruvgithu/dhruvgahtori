@@ -22,7 +22,7 @@ const Projects = () => {
       description: "Developed a system to identify customers likely to stop using a service. Achieved around 85% accuracy through hyperparameter tuning.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       gradient: "from-accent to-primary",
-      image: churnPrediction,
+      
     },
     {
       title: "Sales Forecasting using Predictive Analytics",
