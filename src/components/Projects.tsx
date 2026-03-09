@@ -8,7 +8,7 @@ const Projects = () => {
       description: "Built using Python and OpenCV for real-time vehicle detection and license plate extraction with Haar Cascade Algorithm and OCR.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
       gradient: "from-primary to-secondary",
-      image: anprOutput,
+      
     },
     {
       title: "Multiple Disease Prediction System",
