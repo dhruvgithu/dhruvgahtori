@@ -1,3 +1,5 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, Linkedin, Github, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -5,10 +7,23 @@ import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
 
 const Contact = () => {
+  const [sending, setSending] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Thank you for your message! I'll get back to you soon.");
-    (e.target as HTMLFormElement).reset();
+    setSending(true);
+    const form = e.target as HTMLFormElement;
+
+    emailjs
+      .sendForm("service_8ozfgvk", "template_zjgbdle", form, "pL6H6pHl0cJrwLVm1")
+      .then(() => {
+        toast.success("Thank you for your message! I'll get back to you soon.");
+        form.reset();
+      })
+      .catch(() => {
+        toast.error("Failed to send message. Please try again.");
+      })
+      .finally(() => setSending(false));
   };
 
   const contactInfo = [
