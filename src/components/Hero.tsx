@@ -1,4 +1,5 @@
-import { ArrowDown, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowDown, Download, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
@@ -8,11 +9,8 @@ const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -20,73 +18,95 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Particle animation layer */}
         <ParticleBackground />
-        
-        {/* Main gradient orbs with higher opacity and parallax */}
-        <div 
-          className="absolute w-[500px] h-[500px] bg-primary/40 rounded-full blur-3xl -top-20 -left-20 animate-float transition-transform duration-75" 
-          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+
+        {/* Gradient mesh background */}
+        <div
+          className="absolute w-[700px] h-[700px] rounded-full animate-pulse-glow"
+          style={{
+            background: 'radial-gradient(circle, hsl(265, 90%, 65% / 0.25), transparent 70%)',
+            top: '-15%',
+            left: '-10%',
+            transform: `translateY(${scrollY * 0.4}px)`,
+          }}
         />
-        <div 
-          className="absolute w-[600px] h-[600px] bg-secondary/35 rounded-full blur-3xl top-1/2 -right-20 animate-float transition-transform duration-75" 
-          style={{ animationDelay: '2s', transform: `translateY(${scrollY * 0.3}px)` }}
+        <div
+          className="absolute w-[600px] h-[600px] rounded-full animate-pulse-glow"
+          style={{
+            background: 'radial-gradient(circle, hsl(200, 100%, 55% / 0.2), transparent 70%)',
+            top: '30%',
+            right: '-10%',
+            animationDelay: '2s',
+            transform: `translateY(${scrollY * 0.3}px)`,
+          }}
         />
-        <div 
-          className="absolute w-[550px] h-[550px] bg-accent/40 rounded-full blur-3xl -bottom-20 left-1/2 animate-float transition-transform duration-75" 
-          style={{ animationDelay: '4s', transform: `translateY(${scrollY * 0.4}px)` }}
+        <div
+          className="absolute w-[500px] h-[500px] rounded-full animate-pulse-glow"
+          style={{
+            background: 'radial-gradient(circle, hsl(330, 85%, 60% / 0.2), transparent 70%)',
+            bottom: '-10%',
+            left: '30%',
+            animationDelay: '4s',
+            transform: `translateY(${scrollY * 0.35}px)`,
+          }}
         />
-        
-        {/* Additional colorful orbs for more vibrancy with parallax */}
-        <div 
-          className="absolute w-[400px] h-[400px] bg-[hsl(320,70%,60%)]/30 rounded-full blur-3xl top-1/4 left-1/4 animate-float transition-transform duration-75" 
-          style={{ animationDelay: '1s', transform: `translateY(${scrollY * 0.6}px)` }}
+
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'linear-gradient(hsl(265, 90%, 65% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(265, 90%, 65% / 0.5) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
         />
-        <div 
-          className="absolute w-[450px] h-[450px] bg-[hsl(240,80%,65%)]/25 rounded-full blur-3xl bottom-1/4 right-1/3 animate-float transition-transform duration-75" 
-          style={{ animationDelay: '3s', transform: `translateY(${scrollY * 0.35}px)` }}
-        />
-        <div 
-          className="absolute w-[350px] h-[350px] bg-[hsl(180,70%,55%)]/30 rounded-full blur-3xl top-1/3 right-1/4 animate-float transition-transform duration-75" 
-          style={{ animationDelay: '5s', transform: `translateY(${scrollY * 0.45}px)` }}
-        />
-        
-        {/* Gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/60" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div 
+        <div
           className="flex flex-col lg:flex-row items-center justify-between gap-12"
-          style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+          style={{ transform: `translateY(${scrollY * 0.15}px)` }}
         >
           {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Hi, I'm <span className="gradient-text">Dhruv Gahtori</span>
+          <motion.div
+            className="flex-1 text-center lg:text-left"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass neon-border mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-muted-foreground">AI & ML Engineer</span>
+            </motion.div>
+
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-display">
+              Hi, I'm{" "}
+              <span className="gradient-text text-glow">Dhruv Gahtori</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-secondary mb-4 font-semibold">
+            <p className="text-2xl md:text-3xl text-secondary mb-4 font-heading font-semibold text-glow-blue">
               Engineering Professional
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
               I'm passionate about building intelligent systems that can solve real-world challenges using AI and Machine Learning
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow"
+                className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow animate-gradient-shift"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
               </Button>
-              <a
-                href="/DhruvGahtori_Resume.pdf"
-                download="DhruvGahtori_Resume.pdf"
-                className="inline-block"
-              >
+              <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" className="inline-block">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow"
+                  className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full glow-pink"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download Resume
@@ -95,31 +115,53 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-primary text-foreground hover:bg-primary/10 font-semibold px-8 py-6 text-lg rounded-full"
+                className="border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get In Touch
               </Button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Profile Photo */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <motion.div
+            className="flex-1 flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+          >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-2xl opacity-50 animate-glow" />
+              {/* Spinning ring */}
+              <div className="absolute -inset-4 rounded-full border border-primary/20 animate-spin-slow" />
+              <div className="absolute -inset-8 rounded-full border border-secondary/10 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
+
+              {/* Glow behind photo */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full blur-3xl opacity-40 animate-glow" />
+
               <img
                 src={profilePhoto}
                 alt="Dhruv Gahtori"
-                className="relative w-64 h-64 md:w-96 md:h-96 rounded-full object-cover border-4 border-primary/30 shadow-2xl"
+                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-2 border-primary/40 shadow-2xl"
               />
+
+              {/* Corner accents */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary rounded-tr-lg" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-secondary rounded-bl-lg" />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </div>
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
+            <ArrowDown className="w-5 h-5 text-primary" />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
