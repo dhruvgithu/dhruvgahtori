@@ -103,6 +103,7 @@ const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Your message..."
                   rows={5}
                   required
@@ -111,9 +112,10 @@ const Contact = () => {
               </div>
               <Button
                 type="submit"
+                disabled={sending}
                 className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground font-semibold py-6 rounded-full glow"
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
