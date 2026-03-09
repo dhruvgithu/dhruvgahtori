@@ -1,9 +1,5 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
-import anprOutput from "@/assets/anpr-output.png";
-import salesForecast from "@/assets/sales-forecast.png";
-import diseasePrediction from "@/assets/disease-prediction.png";
-import churnPrediction from "@/assets/churn-prediction.png";
 
 const Projects = () => {
   const projects = [
