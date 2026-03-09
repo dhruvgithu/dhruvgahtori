@@ -15,7 +15,7 @@ const Projects = () => {
       description: "Machine Learning-based web application using TensorFlow and Scikit-learn for early diagnosis of diseases with <2 sec latency.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       gradient: "from-secondary to-accent",
-      image: diseasePrediction,
+      
     },
     {
       title: "Customer Churn Prediction System",
