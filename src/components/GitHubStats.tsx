@@ -43,7 +43,7 @@ const GitHubStats = () => {
             className="glass-strong p-6 rounded-2xl neon-border-blue flex items-center justify-center"
           >
             <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a855f7&text_color=e2e8f0`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a855f7&text_color=e2e8f0&hide_title=true`}
               alt="Top Languages"
               className="w-full max-w-md"
               loading="lazy"
