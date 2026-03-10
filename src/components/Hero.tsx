@@ -5,8 +5,18 @@ import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";
 
+const typingTexts = [
+  "AI & Machine Learning Enthusiast",
+  "B.Tech Computer Science Student",
+  "Python Developer",
+  "Problem Solver",
+];
+
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -14,13 +24,31 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const current = typingTexts[textIndex];
+    const speed = isDeleting ? 30 : 60;
+
+    if (!isDeleting && charIndex === current.length) {
+      setTimeout(() => setIsDeleting(true), 1500);
+      return;
+    }
+    if (isDeleting && charIndex === 0) {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % typingTexts.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
+    }, speed);
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, textIndex]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
         <ParticleBackground />
-
-        {/* Gradient mesh background */}
         <div
           className="absolute w-[700px] h-[700px] rounded-full animate-pulse-glow"
           style={{
@@ -50,8 +78,6 @@ const Hero = () => {
             transform: `translateY(${scrollY * 0.35}px)`,
           }}
         />
-
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -59,7 +85,6 @@ const Hero = () => {
             backgroundSize: '60px 60px',
           }}
         />
-
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
       </div>
 
@@ -82,18 +107,22 @@ const Hero = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-muted-foreground">AI & ML Engineer</span>
+              <span className="text-sm font-medium text-muted-foreground">Aspiring AI & ML Engineer</span>
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-display">
               Hi, I'm{" "}
               <span className="gradient-text text-glow">Dhruv Gahtori</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-secondary mb-4 font-heading font-semibold text-glow-blue">
-              Engineering Professional
+            <p className="text-xl md:text-2xl text-secondary mb-2 font-heading font-semibold text-glow-blue">
+              Aspiring AI & Machine Learning Engineer
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-              I'm passionate about building intelligent systems that can solve real-world challenges using AI and Machine Learning
+            <p className="text-lg md:text-xl text-primary/80 mb-4 font-heading h-8">
+              {typingTexts[textIndex].substring(0, charIndex)}
+              <span className="animate-pulse">|</span>
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+              B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button
@@ -131,20 +160,14 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative">
-              {/* Spinning ring */}
               <div className="absolute -inset-4 rounded-full border border-primary/20 animate-spin-slow" />
               <div className="absolute -inset-8 rounded-full border border-secondary/10 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
-
-              {/* Glow behind photo */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full blur-3xl opacity-40 animate-glow" />
-
               <img
                 src={profilePhoto}
                 alt="Dhruv Gahtori"
                 className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-2 border-primary/40 shadow-2xl"
               />
-
-              {/* Corner accents */}
               <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary rounded-tr-lg" />
               <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-secondary rounded-bl-lg" />
             </div>
