@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { Mail, Linkedin, Github, Phone, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -29,7 +29,6 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "dhruvgahtori00@gmail.com", link: "mailto:dhruvgahtori00@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+91 9639412318", link: "tel:+919639412318" },
     { icon: Linkedin, label: "LinkedIn", value: "dhruv-gahtori", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285" },
     { icon: Github, label: "GitHub", value: "dhruvgithu", link: "https://github.com/dhruvgithu" },
   ];
@@ -65,50 +64,18 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2 text-muted-foreground">Name</label>
-                <Input
-                  id="name"
-                  name="from_name"
-                  type="text"
-                  placeholder="Your Name"
-                  required
-                  className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl"
-                />
+                <Input id="name" name="from_name" type="text" placeholder="Your Name" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2 text-muted-foreground">Email</label>
-                <Input
-                  id="email"
-                  name="from_email"
-                  type="email"
-                  placeholder="your.email@example.com"
-                  required
-                  className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl"
-                />
+                <Input id="email" name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2 text-muted-foreground">Message</label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your message..."
-                  rows={5}
-                  required
-                  className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 resize-none rounded-xl"
-                />
+                <Textarea id="message" name="message" placeholder="Your message..." rows={5} required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 resize-none rounded-xl" />
               </div>
-              <Button
-                type="submit"
-                disabled={sending}
-                className="w-full bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 text-primary-foreground font-semibold py-6 rounded-full glow animate-gradient-shift"
-              >
-                {sending ? (
-                  "Sending..."
-                ) : (
-                  <>
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
-                  </>
-                )}
+              <Button type="submit" disabled={sending} className="w-full bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 text-primary-foreground font-semibold py-6 rounded-full glow animate-gradient-shift">
+                {sending ? "Sending..." : (<><Send className="w-4 h-4 mr-2" />Send Message</>)}
               </Button>
             </form>
           </motion.div>

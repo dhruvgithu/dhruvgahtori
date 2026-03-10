@@ -1,20 +1,22 @@
-import { Heart, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer className="py-12 border-t border-primary/10 relative">
-      {/* Subtle glow line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground">
-              Made with <Heart className="inline w-4 h-4 text-accent" /> by{" "}
+              Designed & Built by{" "}
               <span className="gradient-text font-bold">Dhruv Gahtori</span>
             </p>
-            <p className="text-sm text-muted-foreground/60 mt-1">
+            <p className="text-sm text-muted-foreground/80 mt-1">
+              AI & ML Enthusiast | Uttarakhand, India
+            </p>
+            <p className="text-xs text-muted-foreground/50 mt-1">
               © 2025 All rights reserved
             </p>
           </div>

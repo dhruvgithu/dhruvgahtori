@@ -1,44 +1,29 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Wrench } from "lucide-react";
+import { Code2, Brain, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Programming Languages",
+      title: "Programming",
       skills: ["Python", "C", "C++", "Java", "JavaScript"],
       borderClass: "neon-border",
       iconGradient: "from-primary to-secondary",
     },
     {
       icon: Brain,
-      title: "Machine Learning & AI",
+      title: "AI / ML",
       skills: ["TensorFlow", "Scikit-learn", "Keras", "Pandas", "NumPy", "OpenCV", "CNNs"],
       borderClass: "neon-border-blue",
       iconGradient: "from-secondary to-neon-cyan",
     },
     {
-      icon: Database,
-      title: "Data & Visualization",
-      skills: ["Matplotlib", "Seaborn", "Data Augmentation", "Image Processing"],
+      icon: Wrench,
+      title: "Tools",
+      skills: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Docker", "Django"],
       borderClass: "neon-border-pink",
       iconGradient: "from-accent to-primary",
     },
-    {
-      icon: Wrench,
-      title: "Tools & Platforms",
-      skills: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Docker"],
-      borderClass: "neon-border",
-      iconGradient: "from-primary to-accent",
-    },
-  ];
-
-  const softSkills = [
-    "Problem Solving",
-    "Team Collaboration",
-    "Leadership",
-    "Public Speaking",
-    "Time Management",
   ];
 
   return (
@@ -57,7 +42,7 @@ const Skills = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -92,29 +77,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className="glass-strong p-8 rounded-2xl max-w-6xl mx-auto neon-border"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center font-heading">
-            <span className="gradient-text">Soft Skills</span>
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {softSkills.map((skill, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1, y: -3 }}
-                className="px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-full font-semibold hover:from-primary/20 hover:to-secondary/20 hover:border-primary/40 transition-all cursor-default"
-              >
-                {skill}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
