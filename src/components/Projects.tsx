@@ -35,63 +35,59 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-6 relative w-full">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-6"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 font-display">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto text-sm">
             Innovative AI/ML solutions solving real-world problems
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className={`glass-strong p-6 rounded-2xl ${project.borderClass} group transition-all duration-300 cursor-default`}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              whileHover={{ y: -5, scale: 1.01 }}
+              className={`glass-strong p-5 rounded-2xl ${project.borderClass} group transition-all duration-300 cursor-default`}
             >
-              <div className={`h-1.5 w-full bg-gradient-to-r ${project.gradient} rounded-full mb-6 group-hover:h-2 transition-all`} />
-
-              <h3 className="text-xl font-bold mb-3 font-heading group-hover:gradient-text transition-all">
+              <div className={`h-1 w-full bg-gradient-to-r ${project.gradient} rounded-full mb-4 group-hover:h-1.5 transition-all`} />
+              <h3 className="text-lg font-bold mb-2 font-heading group-hover:gradient-text transition-all">
                 {project.title}
               </h3>
-
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
                 {project.description}
               </p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 mb-4">
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1.5 bg-primary/5 border border-primary/20 rounded-full text-xs font-medium hover:border-primary/50 hover:bg-primary/10 transition-all"
+                    className="px-2.5 py-1 bg-primary/5 border border-primary/20 rounded-full text-xs font-medium hover:border-primary/50 hover:bg-primary/10 transition-all"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary/40 text-foreground hover:bg-primary/10 hover:border-primary rounded-full transition-all"
+                className="border-primary/40 text-foreground hover:bg-primary/10 hover:border-primary rounded-full transition-all text-xs"
                 onClick={() => window.open('https://github.com/dhruvgithu', '_blank')}
               >
-                <Github className="w-4 h-4 mr-2" />
+                <Github className="w-3 h-3 mr-1.5" />
                 View on GitHub
               </Button>
             </motion.div>

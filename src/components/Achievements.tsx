@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Trophy, Camera, Award, Rocket } from "lucide-react";
+import { Trophy, Camera, Award, Rocket, BookOpen, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
 
 const achievements = [
   {
@@ -30,45 +31,63 @@ const achievements = [
     gradient: "from-primary via-accent to-secondary",
     border: "neon-border",
   },
+  {
+    icon: BookOpen,
+    title: "Articles",
+    description: "Thoughts, tutorials, and insights on AI, Machine Learning, and software development.",
+    gradient: "from-secondary to-accent",
+    border: "neon-border-blue",
+    isArticles: true,
+  },
 ];
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="py-24 relative">
+    <section id="achievements" className="py-6 relative w-full">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-6"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 font-display">
             Key <span className="gradient-text">Achievements</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {achievements.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className={`glass-strong p-8 rounded-2xl ${item.border} transition-all duration-300 cursor-default`}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className={`glass-strong p-5 rounded-2xl ${item.border} transition-all duration-300 cursor-default flex flex-col`}
             >
               <motion.div
-                className={`bg-gradient-to-br ${item.gradient} p-4 rounded-xl w-fit mb-5`}
+                className={`bg-gradient-to-br ${item.gradient} p-3 rounded-xl w-fit mb-3`}
                 whileHover={{ rotate: 10, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <item.icon className="w-7 h-7 text-primary-foreground" />
+                <item.icon className="w-5 h-5 text-primary-foreground" />
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 font-heading">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="text-sm font-bold mb-2 font-heading">{item.title}</h3>
+              <p className="text-muted-foreground text-xs leading-relaxed flex-1">{item.description}</p>
+              {'isArticles' in item && item.isArticles && (
+                <Button
+                  size="sm"
+                  className="mt-3 bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold rounded-full text-xs"
+                  onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
+                >
+                  <ExternalLink className="w-3 h-3 mr-1.5" />
+                  Read Articles
+                </Button>
+              )}
             </motion.div>
           ))}
         </div>

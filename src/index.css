@@ -81,6 +81,22 @@
     scroll-behavior: smooth;
   }
 
+  .snap-container {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .slide-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
   h1, h2, h3 {
     font-family: 'Orbitron', 'Space Grotesk', sans-serif;
   }

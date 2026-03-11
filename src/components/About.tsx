@@ -7,8 +7,8 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const About = () => {
@@ -26,31 +26,31 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-8 relative overflow-hidden w-full">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-6"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 font-display">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
           <motion.div
-            className="glass-strong p-8 rounded-2xl neon-border"
-            initial={{ opacity: 0, x: -40 }}
+            className="glass-strong p-6 rounded-2xl neon-border"
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-6 font-heading gradient-text">My Journey</h3>
-            <div className="space-y-4 text-muted-foreground">
+            <h3 className="text-xl font-bold mb-4 font-heading gradient-text">My Journey</h3>
+            <div className="space-y-3 text-muted-foreground text-sm">
               <p className="leading-relaxed">
                 From <span className="text-neon-cyan font-semibold">Champawat, Uttarakhand</span>, I'm currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University, Bhimtal.
               </p>
@@ -64,7 +64,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -74,14 +74,14 @@ const About = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className={`glass p-6 rounded-xl transition-all duration-300 cursor-default border border-transparent ${borderColors[interest.color]}`}
+                whileHover={{ scale: 1.05, y: -3 }}
+                className={`glass p-4 rounded-xl transition-all duration-300 cursor-default border border-transparent ${borderColors[interest.color]}`}
               >
-                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 p-3 rounded-lg w-fit mb-4">
-                  <interest.icon className="w-8 h-8 text-primary" />
+                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 p-2 rounded-lg w-fit mb-2">
+                  <interest.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h4 className="font-bold mb-2 font-heading text-lg">{interest.title}</h4>
-                <p className="text-sm text-muted-foreground">{interest.description}</p>
+                <h4 className="font-bold mb-1 font-heading text-sm">{interest.title}</h4>
+                <p className="text-xs text-muted-foreground">{interest.description}</p>
               </motion.div>
             ))}
           </motion.div>
