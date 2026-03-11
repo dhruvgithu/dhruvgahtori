@@ -12,35 +12,54 @@ import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingShapes from "@/components/FloatingShapes";
-import WaveSeparator from "@/components/WaveSeparator";
+
+const SlideWrapper = ({ children, id }: { children: React.ReactNode; id?: string }) => (
+  <div id={id} className="slide-section">
+    {children}
+  </div>
+);
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="snap-container relative">
       <FloatingShapes />
       <Navbar />
-      <Hero />
-      <WaveSeparator variant="purple" />
-      <About />
-      <WaveSeparator variant="blue" flip />
-      <Education />
-      <WaveSeparator variant="pink" />
-      <TechStack />
-      <WaveSeparator variant="purple" flip />
-      <Projects />
-      <WaveSeparator variant="blue" />
-      <Skills />
-      <WaveSeparator variant="pink" flip />
-      <Experience />
-      <WaveSeparator variant="purple" />
-      <Achievements />
-      <WaveSeparator variant="blue" flip />
-      <GitHubStats />
-      <WaveSeparator variant="pink" />
-      <CurrentlyLearning />
-      <WaveSeparator variant="purple" flip />
-      <Contact />
-      <Footer />
+      <SlideWrapper id="home-slide">
+        <Hero />
+      </SlideWrapper>
+      <SlideWrapper id="about-slide">
+        <About />
+      </SlideWrapper>
+      <SlideWrapper id="education-slide">
+        <Education />
+      </SlideWrapper>
+      <SlideWrapper id="techskills-slide">
+        <div className="w-full">
+          <TechStack />
+          <Skills />
+        </div>
+      </SlideWrapper>
+      <SlideWrapper id="projects-slide">
+        <Projects />
+      </SlideWrapper>
+      <SlideWrapper id="experience-slide">
+        <Experience />
+      </SlideWrapper>
+      <SlideWrapper id="achievements-slide">
+        <Achievements />
+      </SlideWrapper>
+      <SlideWrapper id="github-slide">
+        <div className="w-full">
+          <GitHubStats />
+          <CurrentlyLearning />
+        </div>
+      </SlideWrapper>
+      <SlideWrapper id="contact-slide">
+        <div className="w-full">
+          <Contact />
+          <Footer />
+        </div>
+      </SlideWrapper>
     </div>
   );
 };

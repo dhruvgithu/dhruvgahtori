@@ -34,77 +34,70 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-6 relative">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-4"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 font-display">
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out!
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <motion.div
-            className="glass-strong p-8 rounded-2xl neon-border"
-            initial={{ opacity: 0, x: -40 }}
+            className="glass-strong p-5 rounded-2xl neon-border"
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-bold mb-6 font-heading">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <h3 className="text-lg font-bold mb-4 font-heading">Send Me a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2 text-muted-foreground">Name</label>
-                <Input id="name" name="from_name" type="text" placeholder="Your Name" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl" />
+                <Input name="from_name" type="text" placeholder="Your Name" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2 text-muted-foreground">Email</label>
-                <Input id="email" name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl" />
+                <Input name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2 text-muted-foreground">Message</label>
-                <Textarea id="message" name="message" placeholder="Your message..." rows={5} required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 resize-none rounded-xl" />
+                <Textarea name="message" placeholder="Your message..." rows={3} required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 resize-none rounded-xl text-sm" />
               </div>
-              <Button type="submit" disabled={sending} className="w-full bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 text-primary-foreground font-semibold py-6 rounded-full glow animate-gradient-shift">
+              <Button type="submit" disabled={sending} className="w-full bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 text-primary-foreground font-semibold py-5 rounded-full glow animate-gradient-shift text-sm">
                 {sending ? "Sending..." : (<><Send className="w-4 h-4 mr-2" />Send Message</>)}
               </Button>
             </form>
           </motion.div>
 
           <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="glass-strong p-8 rounded-2xl neon-border-blue">
-              <h3 className="text-2xl font-bold mb-6 font-heading">Contact Information</h3>
-              <div className="space-y-4">
+            <div className="glass-strong p-5 rounded-2xl neon-border-blue">
+              <h3 className="text-lg font-bold mb-4 font-heading">Contact Information</h3>
+              <div className="space-y-3">
                 {contactInfo.map((info, index) => (
                   <motion.a
                     key={index}
                     href={info.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ x: 8, scale: 1.02 }}
-                    className="flex items-center gap-4 p-4 bg-background/20 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/20"
+                    whileHover={{ x: 5, scale: 1.02 }}
+                    className="flex items-center gap-3 p-3 bg-background/20 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/20"
                   >
-                    <div className="bg-gradient-to-br from-primary to-secondary p-3 rounded-lg shrink-0">
-                      <info.icon className="w-5 h-5 text-primary-foreground" />
+                    <div className="bg-gradient-to-br from-primary to-secondary p-2.5 rounded-lg shrink-0">
+                      <info.icon className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground uppercase tracking-wider">{info.label}</p>
-                      <p className="font-semibold">{info.value}</p>
+                      <p className="font-semibold text-sm">{info.value}</p>
                     </div>
                   </motion.a>
                 ))}
