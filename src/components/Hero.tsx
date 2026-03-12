@@ -127,7 +127,8 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow-blue"
+                variant="outline"
+                className="border-2 border-secondary/50 text-foreground hover:bg-secondary/10 hover:border-secondary font-semibold px-6 py-5 rounded-full transition-all duration-300"
                 onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
               >
                 <BookOpen className="w-5 h-5 mr-2" />
