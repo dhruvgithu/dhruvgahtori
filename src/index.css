@@ -129,18 +129,18 @@
   }
 
   .neon-border {
-    border: 1px solid hsl(265, 90%, 65% / 0.4);
-    box-shadow: inset 0 0 20px hsl(265, 90%, 65% / 0.05), 0 0 20px hsl(265, 90%, 65% / 0.1);
+    border: 1px solid hsl(29, 100%, 50% / 0.4);
+    box-shadow: inset 0 0 20px hsl(29, 100%, 50% / 0.05), 0 0 20px hsl(29, 100%, 50% / 0.1);
   }
 
   .neon-border-blue {
-    border: 1px solid hsl(200, 100%, 55% / 0.4);
-    box-shadow: inset 0 0 20px hsl(200, 100%, 55% / 0.05), 0 0 20px hsl(200, 100%, 55% / 0.1);
+    border: 1px solid hsl(217, 91%, 53% / 0.4);
+    box-shadow: inset 0 0 20px hsl(217, 91%, 53% / 0.05), 0 0 20px hsl(217, 91%, 53% / 0.1);
   }
 
   .neon-border-pink {
-    border: 1px solid hsl(330, 85%, 60% / 0.4);
-    box-shadow: inset 0 0 20px hsl(330, 85%, 60% / 0.05), 0 0 20px hsl(330, 85%, 60% / 0.1);
+    border: 1px solid hsl(29, 100%, 55% / 0.4);
+    box-shadow: inset 0 0 20px hsl(29, 100%, 55% / 0.05), 0 0 20px hsl(29, 100%, 55% / 0.1);
   }
 
   .animate-float {
