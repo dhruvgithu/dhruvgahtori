@@ -5,8 +5,6 @@ import Education from "@/components/Education";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Achievements from "@/components/Achievements";
 import GitHubStats from "@/components/GitHubStats";
 import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Contact from "@/components/Contact";
@@ -41,12 +39,6 @@ const Index = () => {
       </SlideWrapper>
       <SlideWrapper id="projects-slide">
         <Projects />
-      </SlideWrapper>
-      <SlideWrapper id="experience-slide">
-        <Experience />
-      </SlideWrapper>
-      <SlideWrapper id="achievements-slide">
-        <Achievements />
       </SlideWrapper>
       <SlideWrapper id="github-slide">
         <div className="w-full">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Sparkles, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
@@ -124,6 +124,14 @@ const Hero = () => {
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get In Touch
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow-blue"
+                onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Read Articles
               </Button>
             </div>
           </motion.div>
