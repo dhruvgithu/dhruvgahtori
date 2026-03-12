@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Sparkles, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
