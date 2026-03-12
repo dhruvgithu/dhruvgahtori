@@ -157,16 +157,6 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="flex flex-col items-center gap-1">
-            <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
-            <ArrowDown className="w-4 h-4 text-primary" />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -1,31 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import type { SectionKey } from "@/pages/Index";
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+interface NavbarProps {
+  activeSection: SectionKey;
+  setActiveSection: (section: SectionKey) => void;
+}
+
+const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const container = document.querySelector('.snap-container');
-    const handleScroll = () => setIsScrolled((container?.scrollTop ?? 0) > 50);
-    container?.addEventListener("scroll", handleScroll);
-    return () => container?.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Education", href: "#education" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
+  const navItems: { name: string; key: SectionKey }[] = [
+    { name: "Home", key: "home" },
+    { name: "About", key: "about" },
+    { name: "Education", key: "education" },
+    { name: "Skills", key: "skills" },
+    { name: "Projects", key: "projects" },
+    { name: "GitHub", key: "github" },
+    { name: "Contact", key: "contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleNav = (key: SectionKey) => {
+    setActiveSection(key);
     setIsMobileMenuOpen(false);
   };
 
@@ -34,31 +32,36 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "glass-strong shadow-lg shadow-primary/5" : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 glass-strong shadow-lg shadow-primary/5"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a
-            href="#home"
-            onClick={(e) => { e.preventDefault(); scrollToSection("#home"); }}
+          <button
+            onClick={() => handleNav("home")}
             className="text-xl font-bold font-display gradient-text cursor-pointer hover:text-glow transition-all"
           >
             DG
-          </a>
+          </button>
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-                className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-all font-medium relative group cursor-pointer rounded-full hover:bg-primary/5"
+                onClick={() => handleNav(item.key)}
+                className={`px-3 py-1.5 text-sm transition-all font-medium relative group cursor-pointer rounded-full ${
+                  activeSection === item.key
+                    ? "text-foreground bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                }`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-3/4 rounded-full" />
-              </a>
+                {activeSection === item.key && (
+                  <motion.span
+                    layoutId="nav-indicator"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full"
+                  />
+                )}
+              </button>
             ))}
           </div>
 
@@ -82,17 +85,20 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-1">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <motion.button
                     key={item.name}
-                    href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-all font-medium p-2.5 rounded-xl hover:bg-primary/10 cursor-pointer"
+                    onClick={() => handleNav(item.key)}
+                    className={`text-sm text-left transition-all font-medium p-2.5 rounded-xl cursor-pointer ${
+                      activeSection === item.key
+                        ? "text-foreground bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-primary/10"
+                    }`}
                   >
                     {item.name}
-                  </motion.a>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
