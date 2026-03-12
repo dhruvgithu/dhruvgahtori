@@ -125,6 +125,14 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow-blue"
+                onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Read Articles
+              </Button>
             </div>
           </motion.div>
 
