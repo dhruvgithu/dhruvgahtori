@@ -93,12 +93,12 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(265, 90%, 65% / 0.3)" },
-          "50%": { boxShadow: "0 0 50px hsl(265, 90%, 65% / 0.6), 0 0 100px hsl(200, 100%, 55% / 0.3)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(29, 100%, 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 50px hsl(29, 100%, 50% / 0.6), 0 0 100px hsl(217, 91%, 53% / 0.3)" },
         },
         "border-glow": {
-          "0%, 100%": { borderColor: "hsl(265, 90%, 65% / 0.3)" },
-          "50%": { borderColor: "hsl(330, 85%, 60% / 0.6)" },
+          "0%, 100%": { borderColor: "hsl(29, 100%, 50% / 0.3)" },
+          "50%": { borderColor: "hsl(217, 91%, 53% / 0.6)" },
         },
         "text-shimmer": {
           "0%": { backgroundPosition: "-200% center" },
