@@ -160,11 +160,11 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 20px hsl(265, 90%, 65% / 0.5), 0 0 40px hsl(265, 90%, 65% / 0.2);
+    text-shadow: 0 0 20px hsl(29, 100%, 50% / 0.5), 0 0 40px hsl(29, 100%, 50% / 0.2);
   }
 
   .text-glow-blue {
-    text-shadow: 0 0 20px hsl(200, 100%, 55% / 0.5), 0 0 40px hsl(200, 100%, 55% / 0.2);
+    text-shadow: 0 0 20px hsl(217, 91%, 53% / 0.5), 0 0 40px hsl(217, 91%, 53% / 0.2);
   }
 
   @keyframes float {
