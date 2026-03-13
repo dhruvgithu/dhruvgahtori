@@ -12,7 +12,11 @@ const typingTexts = [
   "Problem Solver",
 ];
 
-const Hero = () => {
+interface HeroProps {
+  onNavigate?: (section: string) => void;
+}
+
+const Hero = ({ onNavigate }: HeroProps) => {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
