@@ -93,13 +93,6 @@ const Hero = ({ onNavigate }: HeroProps) => {
               B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
             </p>
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow animate-gradient-shift"
-                onClick={() => onNavigate?.('projects')}
-              >
-                View My Work
-              </Button>
               <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" className="inline-block">
                 <Button
                   size="lg"
