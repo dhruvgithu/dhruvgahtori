@@ -12,7 +12,11 @@ const typingTexts = [
   "Problem Solver",
 ];
 
-const Hero = () => {
+interface HeroProps {
+  onNavigate?: (section: string) => void;
+}
+
+const Hero = ({ onNavigate }: HeroProps) => {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -91,7 +95,7 @@ const Hero = () => {
               <span className="gradient-text text-glow">Dhruv Gahtori</span>
             </h1>
             <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue">
-              Aspiring AI & Machine Learning Engineer
+              Technology Enthusiast
             </p>
             <p className="text-base md:text-lg text-primary/80 mb-3 font-heading h-7">
               {typingTexts[textIndex].substring(0, charIndex)}
@@ -104,7 +108,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow animate-gradient-shift"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => onNavigate?.('projects')}
               >
                 View My Work
               </Button>
@@ -121,7 +125,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary font-semibold px-6 py-5 rounded-full transition-all duration-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => onNavigate?.('contact')}
               >
                 Get In Touch
               </Button>
