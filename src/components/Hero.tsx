@@ -6,6 +6,7 @@ import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";
 
 const typingTexts = [
+  "Technology Enthusiast",
   "AI & Machine Learning Enthusiast",
   "B.Tech Computer Science Student",
   "Python Developer",
@@ -85,8 +86,9 @@ const Hero = ({ onNavigate }: HeroProps) => {
               Hi, I'm{" "}
               <span className="gradient-text text-glow">Dhruv Gahtori</span>
             </h1>
-            <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue">
-              Technology Enthusiast
+            <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue h-7">
+              {typingTexts[textIndex].substring(0, charIndex)}
+              <span className="animate-pulse">|</span>
             </p>
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mb-6 leading-relaxed">
               B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
