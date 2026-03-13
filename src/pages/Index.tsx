@@ -43,8 +43,7 @@ const Index = () => {
   ),
 };
 
-const Index = () => {
-  const [activeSection, setActiveSection] = useState<SectionKey>("home");
+  
 
   return (
     <div className="h-screen w-screen overflow-hidden relative bg-background">
