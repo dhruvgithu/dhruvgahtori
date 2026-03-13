@@ -108,7 +108,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow animate-gradient-shift"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => onNavigate?.('projects')}
               >
                 View My Work
               </Button>
