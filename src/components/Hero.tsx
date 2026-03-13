@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 const typingTexts = [
   "Technology Enthusiast",
-  "AI & Machine Learning Enthusiast",
   "B.Tech Computer Science Student",
   "Problem Solver",
 ];
