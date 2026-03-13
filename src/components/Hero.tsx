@@ -125,7 +125,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary font-semibold px-6 py-5 rounded-full transition-all duration-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => onNavigate?.('contact')}
               >
                 Get In Touch
               </Button>
