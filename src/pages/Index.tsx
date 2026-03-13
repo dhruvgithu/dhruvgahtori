@@ -15,8 +15,11 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "github" | "contact";
 
-const sections: Record<SectionKey, React.ReactNode> = {
-  home: <Hero />,
+const Index = () => {
+  const [activeSection, setActiveSection] = useState<SectionKey>("home");
+
+  const sections: Record<SectionKey, React.ReactNode> = {
+    home: <Hero onNavigate={(s) => setActiveSection(s as SectionKey)} />,
   about: <About />,
   education: <Education />,
   skills: (
