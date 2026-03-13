@@ -9,7 +9,6 @@ const typingTexts = [
   "Technology Enthusiast",
   "AI & Machine Learning Enthusiast",
   "B.Tech Computer Science Student",
-  "Python Developer",
   "Problem Solver",
 ];
 
