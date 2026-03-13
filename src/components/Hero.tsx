@@ -95,7 +95,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
               <span className="gradient-text text-glow">Dhruv Gahtori</span>
             </h1>
             <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue">
-              Aspiring AI & Machine Learning Engineer
+              Technology Enthusiast
             </p>
             <p className="text-base md:text-lg text-primary/80 mb-3 font-heading h-7">
               {typingTexts[textIndex].substring(0, charIndex)}
