@@ -92,7 +92,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mb-6 leading-relaxed">
               B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
             </p>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="flex flex-nowrap gap-3 justify-center lg:justify-start">
               <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" className="inline-block">
                 <Button
                   size="lg"
