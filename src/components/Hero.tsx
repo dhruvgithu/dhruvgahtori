@@ -88,10 +88,6 @@ const Hero = ({ onNavigate }: HeroProps) => {
             <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue">
               Technology Enthusiast
             </p>
-            <p className="text-base md:text-lg text-primary/80 mb-3 font-heading h-7">
-              {typingTexts[textIndex].substring(0, charIndex)}
-              <span className="animate-pulse">|</span>
-            </p>
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mb-6 leading-relaxed">
               B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
             </p>
