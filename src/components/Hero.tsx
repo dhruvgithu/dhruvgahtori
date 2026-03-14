@@ -61,7 +61,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight font-display">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight font-display whitespace-nowrap">
             Hi, I'm{" "}
             <span className="gradient-text text-glow">Dhruv Gahtori</span>
           </h1>
