@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Sparkles, BookOpen } from "lucide-react";
+import { Download, BookOpen, FolderOpen, Github, Linkedin, Mail, TreePine, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
-import profilePhoto from "@/assets/dhruv-photo.jpg";
 import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";
 
@@ -40,109 +39,132 @@ const Hero = ({ onNavigate }: HeroProps) => {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex]);
 
+  const socialLinks = [
+    { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu" },
+    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285" },
+    { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00" },
+    { icon: Mail, label: "Email", link: "mailto:dhruvgahtori00@gmail.com" },
+  ];
+
   return (
-    <section id="home" className="w-full h-full flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="w-full h-full flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <ParticleBackground />
-        <div
-          className="absolute w-[700px] h-[700px] rounded-full animate-pulse-glow"
-          style={{
-            background: 'radial-gradient(circle, hsl(265, 90%, 65% / 0.25), transparent 70%)',
-            top: '-15%',
-            left: '-10%',
-          }}
-        />
-        <div
-          className="absolute w-[600px] h-[600px] rounded-full animate-pulse-glow"
-          style={{
-            background: 'radial-gradient(circle, hsl(200, 100%, 55% / 0.2), transparent 70%)',
-            top: '30%',
-            right: '-10%',
-            animationDelay: '2s',
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'linear-gradient(hsl(265, 90%, 65% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(265, 90%, 65% / 0.5) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          <motion.div
-            className="flex-1 text-center lg:text-left"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight font-display">
-              Hi, I'm{" "}
-              <span className="gradient-text text-glow">Dhruv Gahtori</span>
-            </h1>
-            <p className="text-lg md:text-xl text-secondary mb-1 font-heading font-semibold text-glow-blue h-7">
+      <div className="flex-1 flex flex-col justify-center container mx-auto px-6 md:px-12 relative z-10">
+        {/* Hero Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="max-w-2xl"
+        >
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight font-display">
+            Hi, I'm{" "}
+            <span className="gradient-text text-glow">Dhruv</span>, a{" "}
+            <span className="text-foreground">
               {typingTexts[textIndex].substring(0, charIndex)}
-              <span className="animate-pulse">|</span>
-            </p>
-            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mb-6 leading-relaxed">
-              B.Tech Computer Science Student passionate about building intelligent systems that solve real-world challenges using AI and Machine Learning
-            </p>
-            <div className="flex flex-nowrap gap-3 justify-center lg:justify-start">
-              <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" className="inline-block">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-primary-foreground font-semibold px-6 py-5 rounded-full glow-pink"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
-              </a>
+              <span className="animate-pulse text-primary">|</span>
+            </span>
+          </h1>
+          <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-6 leading-relaxed">
+            I am a B.Tech Computer Science student passionate about building intelligent systems.
+            I work on problem-solving and creating AI-powered solutions that tackle real-world challenges.
+          </p>
+          <div className="flex gap-3">
+            <Button
+              size="lg"
+              className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-6 rounded-md"
+              onClick={() => onNavigate?.('projects')}
+            >
+              View Projects
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border border-border text-foreground hover:bg-muted font-semibold px-6 rounded-md"
+              onClick={() => onNavigate?.('contact')}
+            >
+              Hire Me
+            </Button>
+          </div>
+        </motion.div>
+
+        {/* Highlights Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+          className="mt-10"
+        >
+          <h2 className="text-lg font-bold mb-4 font-display text-foreground">Highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+            {/* Articles Card */}
+            <div className="bg-card/80 border border-border rounded-lg p-5 hover:border-primary/40 transition-all duration-300">
+              <h3 className="text-base font-bold text-foreground mb-2 font-display">Articles</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Thoughts, tutorials, and insights on AI, machine learning, and software development.
+              </p>
               <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary font-semibold px-6 py-5 rounded-full transition-all duration-300"
-                onClick={() => onNavigate?.('contact')}
-              >
-                Get In Touch
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-secondary/50 text-foreground hover:bg-secondary/10 hover:border-secondary font-semibold px-6 py-5 rounded-full transition-all duration-300"
+                size="sm"
+                className="bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-md"
                 onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
               >
-                <BookOpen className="w-5 h-5 mr-2" />
+                <BookOpen className="w-4 h-4 mr-1.5" />
                 Read Articles
               </Button>
             </div>
-          </motion.div>
 
-          <motion.div
-            className="flex-1 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          >
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full border border-primary/20 animate-spin-slow" />
-              <div className="absolute -inset-8 rounded-full border border-secondary/10 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full blur-3xl opacity-40 animate-glow" />
-              <img
-                src={profilePhoto}
-                alt="Dhruv Gahtori"
-                className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover border-2 border-primary/40 shadow-2xl"
-              />
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary rounded-tr-lg" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-secondary rounded-bl-lg" />
+            {/* Portfolio Card */}
+            <div className="bg-card/80 border border-border rounded-lg p-5 hover:border-primary/40 transition-all duration-300">
+              <h3 className="text-base font-bold text-foreground mb-2 font-display">Portfolio</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Explore my projects, skills, education, and everything I've been working on.
+              </p>
+              <Button
+                size="sm"
+                className="bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-md"
+                onClick={() => onNavigate?.('about')}
+              >
+                <FolderOpen className="w-4 h-4 mr-1.5" />
+                View Portfolio
+              </Button>
             </div>
-          </motion.div>
-        </div>
-
+          </div>
+        </motion.div>
       </div>
+
+      {/* Social Links Footer */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.5 }}
+        className="relative z-10 pb-4 pt-2"
+      >
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
+                >
+                  <social.icon className="w-4 h-4" />
+                  {social.label}
+                </a>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              © 2026 Dhruv Gahtori
+            </p>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
