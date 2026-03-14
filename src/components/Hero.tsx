@@ -63,11 +63,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
         >
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight font-display">
             Hi, I'm{" "}
-            <span className="gradient-text text-glow">Dhruv</span>, a{" "}
-            <span className="text-foreground">
-              {typingTexts[textIndex].substring(0, charIndex)}
-              <span className="animate-pulse text-primary">|</span>
-            </span>
+            <span className="gradient-text text-glow">Dhruv Gahtori</span>
           </h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-6 leading-relaxed">
             I am a B.Tech Computer Science student passionate about building intelligent systems.
