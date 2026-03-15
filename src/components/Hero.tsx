@@ -61,9 +61,8 @@ const Hero = ({ onNavigate }: HeroProps) => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight font-display whitespace-nowrap">
-            Hi, I'm{" "}
-            <span className="gradient-text text-glow">Dhruv Gahtori</span>
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-3 leading-tight font-display">
+            Hi, I'm Dhruv Gahtori
           </h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-6 leading-relaxed">
             I am a B.Tech Computer Science student passionate about building intelligent systems.
