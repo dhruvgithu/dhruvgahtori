@@ -6,7 +6,7 @@ import Education from "@/components/Education";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import GitHubStats from "@/components/GitHubStats";
+
 import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
