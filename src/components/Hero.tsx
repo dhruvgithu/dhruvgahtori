@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, BookOpen, FolderOpen, Github, Linkedin, Mail, TreePine, ExternalLink } from "lucide-react";
+import { Download, BookOpen, FolderOpen, Github, Linkedin, TreePine, ExternalLink, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import ParticleBackground from "./ParticleBackground";
 import { useEffect, useState } from "react";

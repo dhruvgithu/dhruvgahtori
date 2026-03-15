@@ -29,12 +29,6 @@ const Index = () => {
     </div>
   ),
   projects: <Projects />,
-  github: (
-    <div className="w-full h-full overflow-y-auto">
-      <GitHubStats />
-      <CurrentlyLearning />
-    </div>
-  ),
   contact: (
     <div className="w-full h-full overflow-y-auto">
       <Contact />
