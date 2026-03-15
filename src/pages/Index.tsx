@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import FloatingShapes from "@/components/FloatingShapes";
 import { AnimatePresence, motion } from "framer-motion";
 
-export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "github" | "contact";
+export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "contact";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>("home");
