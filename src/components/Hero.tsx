@@ -43,7 +43,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
     { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu" },
     { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285" },
     { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00" },
-    { icon: Mail, label: "Email", link: "mailto:dhruvgahtori00@gmail.com" },
+    { icon: ExternalLink, label: "Telegram", link: "https://t.me/dhruvgahtori" },
   ];
 
   return (
