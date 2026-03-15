@@ -82,7 +82,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
               className="border border-border text-foreground hover:bg-muted font-semibold px-6 rounded-md"
               onClick={() => onNavigate?.('contact')}
             >
-              Hire Me
+              Get in Touch
             </Button>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
+import { Download, MapPin, GraduationCap, Code } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
 
@@ -50,13 +50,16 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-xl font-bold mb-4 font-heading gradient-text">My Journey</h3>
-            <div className="space-y-4 text-muted-foreground text-sm">
+            <div className="space-y-3 text-muted-foreground text-sm">
               <p className="leading-relaxed">
-                From <span className="text-neon-cyan font-semibold">Champawat, Uttarakhand</span>, I'm currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University, Bhimtal.
+                I am originally from <span className="text-neon-cyan font-semibold">Champawat, Uttarakhand</span>, and currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University, Bhimtal.
+              </p>
+              <p className="leading-relaxed">
+                I am passionate about technology, problem-solving, and exploring modern tools in software development. My focus is on building practical projects, learning new technologies, and continuously improving my skills as a developer.
               </p>
             </div>
             <div className="mt-6">
-              <a href="/DhruvGahtori_Resume.pdf" download>
+              <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf">
                 <Button
                   size="sm"
                   className="bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-md"
@@ -68,6 +71,38 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Info Cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <a
+            href="https://maps.app.goo.gl/GxTjDP99rKkEdqbT8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card/80 border border-border rounded-lg p-4 text-center hover:border-primary/40 transition-all duration-300 cursor-pointer"
+          >
+            <MapPin className="w-6 h-6 mx-auto mb-2 text-primary" />
+            <h4 className="text-sm font-bold text-foreground">Location</h4>
+            <p className="text-xs text-muted-foreground mt-1">Uttarakhand, India</p>
+          </a>
+
+          <div className="bg-card/80 border border-border rounded-lg p-4 text-center hover:border-primary/40 transition-all duration-300">
+            <GraduationCap className="w-6 h-6 mx-auto mb-2 text-primary" />
+            <h4 className="text-sm font-bold text-foreground">Education</h4>
+            <p className="text-xs text-muted-foreground mt-1">B.Tech CSE</p>
+          </div>
+
+          <div className="bg-card/80 border border-border rounded-lg p-4 text-center hover:border-primary/40 transition-all duration-300">
+            <Code className="w-6 h-6 mx-auto mb-2 text-primary" />
+            <h4 className="text-sm font-bold text-foreground">Interest</h4>
+            <p className="text-xs text-muted-foreground mt-1">Software Development & AI</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
