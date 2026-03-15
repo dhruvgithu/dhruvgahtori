@@ -18,7 +18,7 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
     { name: "Education", key: "education" },
     { name: "Skills", key: "skills" },
     { name: "Projects", key: "projects" },
-    { name: "GitHub", key: "github" },
+    
     { name: "Contact", key: "contact" },
   ];
 

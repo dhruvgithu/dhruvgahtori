@@ -6,14 +6,14 @@ import Education from "@/components/Education";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import GitHubStats from "@/components/GitHubStats";
+
 import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingShapes from "@/components/FloatingShapes";
 import { AnimatePresence, motion } from "framer-motion";
 
-export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "github" | "contact";
+export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "contact";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>("home");
@@ -29,12 +29,6 @@ const Index = () => {
     </div>
   ),
   projects: <Projects />,
-  github: (
-    <div className="w-full h-full overflow-y-auto">
-      <GitHubStats />
-      <CurrentlyLearning />
-    </div>
-  ),
   contact: (
     <div className="w-full h-full overflow-y-auto">
       <Contact />
