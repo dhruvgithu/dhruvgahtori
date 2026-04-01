@@ -18,7 +18,6 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
     { name: "Education", key: "education" },
     { name: "Skills", key: "skills" },
     { name: "Projects", key: "projects" },
-    
     { name: "Contact", key: "contact" },
   ];
 
@@ -32,13 +31,13 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass-strong shadow-lg shadow-primary/5"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => handleNav("home")}
-            className="text-xl font-bold font-display gradient-text cursor-pointer hover:text-glow transition-all"
+            className="text-xl font-bold text-primary cursor-pointer hover:opacity-80 transition-all"
           >
             DG
           </button>
@@ -50,15 +49,15 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
                 onClick={() => handleNav(item.key)}
                 className={`px-3 py-1.5 text-sm transition-all font-medium relative group cursor-pointer rounded-full ${
                   activeSection === item.key
-                    ? "text-foreground bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
               >
                 {item.name}
                 {activeSection === item.key && (
                   <motion.span
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-primary rounded-full"
                   />
                 )}
               </button>
@@ -81,7 +80,7 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden glass-strong rounded-2xl p-3 mb-3 overflow-hidden"
+              className="md:hidden bg-background border border-border rounded-2xl p-3 mb-3 overflow-hidden"
             >
               <div className="flex flex-col gap-1">
                 {navItems.map((item, index) => (
@@ -93,8 +92,8 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
                     onClick={() => handleNav(item.key)}
                     className={`text-sm text-left transition-all font-medium p-2.5 rounded-xl cursor-pointer ${
                       activeSection === item.key
-                        ? "text-foreground bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-primary/10"
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
                     }`}
                   >
                     {item.name}

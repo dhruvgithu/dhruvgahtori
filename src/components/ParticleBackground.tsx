@@ -31,27 +31,25 @@ const ParticleBackground = () => {
     window.addEventListener('resize', resizeCanvas);
 
     const colors = [
-      'hsl(265, 90%, 65%)',   // purple
-      'hsl(200, 100%, 55%)',  // blue
-      'hsl(330, 85%, 60%)',   // pink
-      'hsl(270, 100%, 70%)',  // neon purple
-      'hsl(185, 100%, 55%)',  // cyan
-      'hsl(150, 100%, 50%)',  // green
+      'hsl(217, 91%, 53%)',
+      'hsl(200, 80%, 55%)',
+      'hsl(220, 60%, 70%)',
+      'hsl(240, 50%, 75%)',
     ];
 
     const initParticles = () => {
-      const particleCount = 120;
+      const particleCount = 80;
       particlesRef.current = [];
 
       for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
-          size: Math.random() * 2.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 2 + 0.5,
           color: colors[Math.floor(Math.random() * colors.length)],
-          alpha: Math.random() * 0.5 + 0.3,
+          alpha: Math.random() * 0.3 + 0.1,
         });
       }
     };
@@ -73,10 +71,10 @@ const ParticleBackground = () => {
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 180) {
-          const force = (180 - distance) / 180;
-          particle.vx += (dx / distance) * force * 0.015;
-          particle.vy += (dy / distance) * force * 0.015;
+        if (distance < 150) {
+          const force = (150 - distance) / 150;
+          particle.vx += (dx / distance) * force * 0.01;
+          particle.vy += (dy / distance) * force * 0.01;
         }
 
         particle.vx *= 0.99;
@@ -87,36 +85,23 @@ const ParticleBackground = () => {
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw glow
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-        const glowColor = particle.color.replace(')', `, ${particle.alpha * 0.2})`).replace('hsl', 'hsla');
-        ctx.fillStyle = glowColor;
-        ctx.fill();
-
-        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         const particleColor = particle.color.replace(')', `, ${particle.alpha})`).replace('hsl', 'hsla');
         ctx.fillStyle = particleColor;
         ctx.fill();
 
-        // Draw connections
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index >= otherIndex) return;
-
           const cdx = particle.x - otherParticle.x;
           const cdy = particle.y - otherParticle.y;
           const cdistance = Math.sqrt(cdx * cdx + cdy * cdy);
 
-          if (cdistance < 130) {
-            const opacity = 0.15 * (1 - cdistance / 130);
+          if (cdistance < 120) {
+            const opacity = 0.08 * (1 - cdistance / 120);
             ctx.beginPath();
-            const gradient = ctx.createLinearGradient(particle.x, particle.y, otherParticle.x, otherParticle.y);
-            gradient.addColorStop(0, particle.color.replace(')', `, ${opacity})`).replace('hsl', 'hsla'));
-            gradient.addColorStop(1, otherParticle.color.replace(')', `, ${opacity})`).replace('hsl', 'hsla'));
-            ctx.strokeStyle = gradient;
-            ctx.lineWidth = 0.6;
+            ctx.strokeStyle = `hsla(217, 91%, 53%, ${opacity})`;
+            ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.stroke();
@@ -141,7 +126,7 @@ const ParticleBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.5 }}
+      style={{ opacity: 0.4 }}
     />
   );
 };
