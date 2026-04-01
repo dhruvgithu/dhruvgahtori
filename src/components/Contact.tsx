@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
+import SocialIcons from "./SocialIcons";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -34,7 +35,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-6 relative">
+    <section id="contact" className="py-6 relative section-alt">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-4"
@@ -43,32 +44,26 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 font-display">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <motion.div
-            className="glass-strong p-5 rounded-2xl neon-border"
+            className="glass-strong p-5 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-lg font-bold mb-4 font-heading">Send Me a Message</h3>
+            <h3 className="text-lg font-bold mb-4">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-3">
-              <div>
-                <Input name="from_name" type="text" placeholder="Your Name" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
-              </div>
-              <div>
-                <Input name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
-              </div>
-              <div>
-                <Textarea name="message" placeholder="Your message..." rows={3} required className="bg-background/50 border-primary/20 focus:border-primary focus:ring-primary/20 resize-none rounded-xl text-sm" />
-              </div>
-              <Button type="submit" disabled={sending} className="w-full bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 text-primary-foreground font-semibold py-5 rounded-full glow animate-gradient-shift text-sm">
+              <Input name="from_name" type="text" placeholder="Your Name" required className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
+              <Input name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
+              <Textarea name="message" placeholder="Your message..." rows={3} required className="bg-background border-border focus:border-primary focus:ring-primary/20 resize-none rounded-xl text-sm" />
+              <Button type="submit" disabled={sending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-5 rounded-full text-sm">
                 {sending ? "Sending..." : (<><Send className="w-4 h-4 mr-2" />Send Message</>)}
               </Button>
             </form>
@@ -80,8 +75,8 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="glass-strong p-5 rounded-2xl neon-border-blue">
-              <h3 className="text-lg font-bold mb-4 font-heading">Contact Information</h3>
+            <div className="glass-strong p-5 rounded-2xl">
+              <h3 className="text-lg font-bold mb-4">Contact Information</h3>
               <div className="space-y-3">
                 {contactInfo.map((info, index) => (
                   <motion.a
@@ -90,9 +85,9 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5, scale: 1.02 }}
-                    className="flex items-center gap-3 p-3 bg-background/20 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/20"
+                    className="flex items-center gap-3 p-3 bg-muted/50 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/20"
                   >
-                    <div className="bg-gradient-to-br from-primary to-secondary p-2.5 rounded-lg shrink-0">
+                    <div className="bg-primary p-2.5 rounded-lg shrink-0">
                       <info.icon className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
@@ -105,6 +100,8 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
+
+        <SocialIcons />
       </div>
     </section>
   );

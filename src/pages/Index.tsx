@@ -3,14 +3,11 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Education from "@/components/Education";
-import TechStack from "@/components/TechStack";
+import GitHubStats from "@/components/GitHubStats";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-
-import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import FloatingShapes from "@/components/FloatingShapes";
 import { AnimatePresence, motion } from "framer-motion";
 
 export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "contact";
@@ -20,28 +17,25 @@ const Index = () => {
 
   const sections: Record<SectionKey, React.ReactNode> = {
     home: <Hero onNavigate={(s) => setActiveSection(s as SectionKey)} />,
-  about: <About />,
-  education: <Education />,
-  skills: (
-    <div className="w-full h-full overflow-y-auto">
-      <TechStack />
-      <Skills />
-    </div>
-  ),
-  projects: <Projects />,
-  contact: (
-    <div className="w-full h-full overflow-y-auto">
-      <Contact />
-      <Footer />
-    </div>
-  ),
-};
-
-  
+    about: <About />,
+    education: <Education />,
+    skills: (
+      <div className="w-full h-full overflow-y-auto">
+        <GitHubStats />
+        <Skills />
+      </div>
+    ),
+    projects: <Projects />,
+    contact: (
+      <div className="w-full h-full overflow-y-auto">
+        <Contact />
+        <Footer />
+      </div>
+    ),
+  };
 
   return (
     <div className="h-screen w-screen overflow-hidden relative bg-background">
-      <FloatingShapes />
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <div className="h-full w-full pt-16">
         <AnimatePresence mode="wait">
