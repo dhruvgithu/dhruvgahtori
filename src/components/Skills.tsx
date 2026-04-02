@@ -72,6 +72,8 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        <SocialIcons />
       </div>
     </div>
   );
