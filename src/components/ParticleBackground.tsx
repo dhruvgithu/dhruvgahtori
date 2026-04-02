@@ -6,7 +6,6 @@ interface Particle {
   vx: number;
   vy: number;
   size: number;
-  color: string;
   alpha: number;
 }
 
@@ -30,26 +29,18 @@ const ParticleBackground = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    const colors = [
-      'hsl(217, 91%, 53%)',
-      'hsl(200, 80%, 55%)',
-      'hsl(220, 60%, 70%)',
-      'hsl(240, 50%, 75%)',
-    ];
-
     const initParticles = () => {
-      const particleCount = 80;
+      const particleCount = 35;
       particlesRef.current = [];
 
       for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.3,
-          size: Math.random() * 2 + 0.5,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          alpha: Math.random() * 0.3 + 0.1,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: (Math.random() - 0.5) * 0.2,
+          size: Math.random() * 1.5 + 0.5,
+          alpha: Math.random() * 0.15 + 0.05,
         });
       }
     };
@@ -71,10 +62,10 @@ const ParticleBackground = () => {
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 150) {
-          const force = (150 - distance) / 150;
-          particle.vx += (dx / distance) * force * 0.01;
-          particle.vy += (dy / distance) * force * 0.01;
+        if (distance < 120) {
+          const force = (120 - distance) / 120;
+          particle.vx += (dx / distance) * force * 0.008;
+          particle.vy += (dy / distance) * force * 0.008;
         }
 
         particle.vx *= 0.99;
@@ -87,8 +78,7 @@ const ParticleBackground = () => {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        const particleColor = particle.color.replace(')', `, ${particle.alpha})`).replace('hsl', 'hsla');
-        ctx.fillStyle = particleColor;
+        ctx.fillStyle = `hsla(217, 91%, 53%, ${particle.alpha})`;
         ctx.fill();
 
         particlesRef.current.forEach((otherParticle, otherIndex) => {
@@ -97,8 +87,8 @@ const ParticleBackground = () => {
           const cdy = particle.y - otherParticle.y;
           const cdistance = Math.sqrt(cdx * cdx + cdy * cdy);
 
-          if (cdistance < 120) {
-            const opacity = 0.08 * (1 - cdistance / 120);
+          if (cdistance < 100) {
+            const opacity = 0.04 * (1 - cdistance / 100);
             ctx.beginPath();
             ctx.strokeStyle = `hsla(217, 91%, 53%, ${opacity})`;
             ctx.lineWidth = 0.5;
@@ -126,7 +116,7 @@ const ParticleBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.4 }}
+      style={{ opacity: 0.3 }}
     />
   );
 };

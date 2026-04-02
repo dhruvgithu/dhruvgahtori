@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import SocialIcons from "./SocialIcons";
 
 const GitHubStats = () => {
   const username = "dhruvgithu";
 
   return (
-    <div id="github" className="py-6 relative section-alt">
+    <div id="github" className="py-6 relative">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-4"
@@ -26,10 +25,10 @@ const GitHubStats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="glass-strong p-4 rounded-2xl flex items-center justify-center"
+            className="glass-strong p-4 rounded-2xl flex items-center justify-center min-h-[180px]"
           >
             <img
-              src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&icon_color=2563eb&text_color=374151&hide_title=true`}
+              src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=default&hide_border=true&bg_color=00000000&title_color=2563eb&icon_color=2563eb&text_color=374151`}
               alt="GitHub Stats"
               className="w-full max-w-sm"
               loading="lazy"
@@ -41,10 +40,10 @@ const GitHubStats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="glass-strong p-4 rounded-2xl flex items-center justify-center"
+            className="glass-strong p-4 rounded-2xl flex items-center justify-center min-h-[180px]"
           >
             <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=default&hide_border=true&bg_color=ffffff&title_color=2563eb&text_color=374151&hide_title=true`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=default&hide_border=true&bg_color=00000000&title_color=2563eb&text_color=374151`}
               alt="Top Languages"
               className="w-full max-w-sm"
               loading="lazy"
@@ -57,17 +56,15 @@ const GitHubStats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 glass-strong p-4 rounded-2xl max-w-4xl mx-auto flex items-center justify-center"
+          className="mt-4 glass-strong p-4 rounded-2xl max-w-4xl mx-auto flex items-center justify-center min-h-[180px]"
         >
           <img
-            src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=default&hide_border=true&background=ffffff&ring=2563eb&fire=2563eb&currStreakLabel=374151`}
+            src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=default&hide_border=true&background=FFFFFF00&ring=2563eb&fire=2563eb&currStreakLabel=374151`}
             alt="GitHub Streak"
             className="w-full max-w-lg"
             loading="lazy"
           />
         </motion.div>
-
-        <SocialIcons />
       </div>
     </div>
   );
