@@ -80,23 +80,18 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-border text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full transition-all text-xs"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <Github className="w-3 h-3 mr-1.5" />
-                  View on GitHub
+              <div className="flex gap-2 flex-wrap">
+                <Button asChild variant="outline" size="sm" className="border-border text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full transition-all text-xs">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="w-3 h-3 mr-1.5" />
+                    View on GitHub
+                  </a>
                 </Button>
-                <Button
-                  size="sm"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs"
-                  onClick={() => window.open(liveLink, '_blank')}
-                >
-                  <Play className="w-3 h-3 mr-1.5" />
-                  Live
+                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
+                  <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                    <Play className="w-3 h-3 mr-1.5" />
+                    Live
+                  </a>
                 </Button>
               </div>
             </motion.div>

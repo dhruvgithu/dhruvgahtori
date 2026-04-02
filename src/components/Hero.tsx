@@ -30,7 +30,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
           className="max-w-2xl"
         >
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-foreground">
-            Hi, I'm Dhruv Gahtori
+            Hi, I&apos;m Dhruv Gahtori
           </h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl mb-6 leading-relaxed">
             B.Tech Computer Science student passionate about building intelligent systems.
@@ -40,7 +40,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 rounded-md"
-              onClick={() => onNavigate?.('projects')}
+              onClick={() => onNavigate?.("projects")}
             >
               View Projects
             </Button>
@@ -48,7 +48,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
               size="lg"
               variant="outline"
               className="border-2 border-border text-foreground hover:bg-primary/5 hover:border-primary/40 font-semibold px-6 rounded-md transition-all"
-              onClick={() => onNavigate?.('contact')}
+              onClick={() => onNavigate?.("contact")}
             >
               Get in Touch
             </Button>
@@ -62,60 +62,51 @@ const Hero = ({ onNavigate }: HeroProps) => {
           className="mt-10"
         >
           <h2 className="text-lg font-bold mb-4 text-foreground">Highlights</h2>
-          <div className="grid grid-cols-3 gap-4 max-w-3xl">
-            {/* Articles Card */}
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl">
+            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
               <h3 className="text-base font-bold text-foreground mb-2">Articles</h3>
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+              <p className="text-sm text-muted-foreground mb-4">
                 Thoughts, tutorials, and insights on AI, ML, and software development.
               </p>
-              <Button
-                size="sm"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
-                onClick={() => window.open('https://medium.com/@dhruvgahtori00', '_blank')}
-              >
-                <BookOpen className="w-4 h-4 mr-1.5" />
-                Read Articles
+              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full">
+                <a href="https://medium.com/@dhruvgahtori00" target="_blank" rel="noopener noreferrer">
+                  <BookOpen className="w-4 h-4 mr-1.5" />
+                  Read Articles
+                </a>
               </Button>
             </div>
 
-            {/* Portfolio Card */}
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
               <h3 className="text-base font-bold text-foreground mb-2">Portfolio</h3>
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                Explore my projects, skills, education, and everything I've been working on.
+              <p className="text-sm text-muted-foreground mb-4">
+                Explore my projects, skills, education, and everything I&apos;ve been working on.
               </p>
               <Button
                 size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
-                onClick={() => onNavigate?.('about')}
+                onClick={() => onNavigate?.("about")}
               >
                 <FolderOpen className="w-4 h-4 mr-1.5" />
                 View Portfolio
               </Button>
             </div>
 
-            {/* Resume Card */}
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
               <h3 className="text-base font-bold text-foreground mb-2">Resume</h3>
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+              <p className="text-sm text-muted-foreground mb-4">
                 Built for recruiters, focused on impact.
               </p>
-              <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="sm"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 font-semibold rounded-md w-full transition-transform"
-                >
+              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 font-semibold rounded-md w-full transition-transform">
+                <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-1.5" />
                   Download Resume
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Social Links Footer */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -124,7 +115,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
       >
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap justify-center">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}

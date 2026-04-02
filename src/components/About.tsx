@@ -21,7 +21,6 @@ const About = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
-          {/* Profile Photo with floating animation */}
           <motion.div
             className="flex justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -45,7 +44,6 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* Journey */}
           <motion.div
             className="glass-strong p-6 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
@@ -65,7 +63,6 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Info Cards */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mt-8"
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +71,7 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <a
-            href="https://maps.app.goo.gl/wze1vuB2v8yyTzSL8"
+            href="https://www.google.com/maps/search/?api=1&query=Champawat%2C%20Uttarakhand%2C%20India"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-card border border-border rounded-lg p-4 text-center hover:border-primary/40 hover:shadow-md transition-all duration-300 cursor-pointer"
