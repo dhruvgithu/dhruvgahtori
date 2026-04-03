@@ -34,8 +34,8 @@ const Index = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
           </motion.div>
         </div>
-        <GitHubStats />
         <Skills hideHeader />
+        <GitHubStats />
       </div>
     ),
     projects: <Projects />,
