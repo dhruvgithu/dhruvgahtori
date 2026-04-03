@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 import { Code2, Brain, Wrench } from "lucide-react";
 import SocialIcons from "./SocialIcons";
 
-const Skills = () => {
+interface SkillsProps {
+  hideHeader?: boolean;
+}
+
+const Skills = ({ hideHeader = false }: SkillsProps) => {
   const skillCategories = [
     {
       icon: Code2,
@@ -22,20 +26,22 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills" className="py-6 relative">
+    <div id="skills" className={hideHeader ? "pb-6 relative" : "py-6 relative"}>
       <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            Skills & <span className="gradient-text">Expertise</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
-        </motion.div>
+        {!hideHeader && (
+          <motion.div
+            className="text-center mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+              Skills & <span className="gradient-text">Expertise</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
+          </motion.div>
+        )}
 
         <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
