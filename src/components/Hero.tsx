@@ -36,7 +36,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             B.Tech Computer Science student passionate about building intelligent systems.
             I work on problem-solving and creating AI-powered solutions that tackle real-world challenges.
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 rounded-md"
@@ -46,8 +46,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-border text-foreground hover:bg-primary/5 hover:border-primary/40 font-semibold px-6 rounded-md transition-all"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 rounded-md"
               onClick={() => onNavigate?.("contact")}
             >
               Get in Touch
@@ -62,13 +61,13 @@ const Hero = ({ onNavigate }: HeroProps) => {
           className="mt-10"
         >
           <h2 className="text-lg font-bold mb-4 text-foreground">Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl">
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl items-stretch">
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Articles</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-4 flex-1">
                 Thoughts, tutorials, and insights on AI, ML, and software development.
               </p>
-              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full">
+              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10 mt-auto">
                 <a href="https://medium.com/@dhruvgahtori00" target="_blank" rel="noopener noreferrer">
                   <BookOpen className="w-4 h-4 mr-1.5" />
                   Read Articles
@@ -76,14 +75,14 @@ const Hero = ({ onNavigate }: HeroProps) => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Portfolio</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-4 flex-1">
                 Explore my projects, skills, education, and everything I&apos;ve been working on.
               </p>
               <Button
                 size="sm"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10 mt-auto"
                 onClick={() => onNavigate?.("about")}
               >
                 <FolderOpen className="w-4 h-4 mr-1.5" />
@@ -91,12 +90,12 @@ const Hero = ({ onNavigate }: HeroProps) => {
               </Button>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300" style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.05)" }}>
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Resume</h3>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-4 flex-1">
                 Built for recruiters, focused on impact.
               </p>
-              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 font-semibold rounded-md w-full transition-transform">
+              <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] shadow-sm hover:shadow-md font-semibold rounded-md w-full h-10 mt-auto transition-all duration-300">
                 <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-1.5" />
                   Download Resume
