@@ -36,9 +36,14 @@ const Index = () => {
         </div>
         <Skills hideHeader />
         <GitHubStats />
+        <SocialIcons />
       </div>
     ),
-    projects: <Projects />,
+    projects: (
+      <div className="w-full h-full overflow-y-auto">
+        <Projects />
+      </div>
+    ),
     contact: (
       <div className="w-full h-full overflow-y-auto">
         <Contact />

@@ -79,7 +79,6 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
           ))}
         </div>
 
-        <SocialIcons />
       </div>
     </div>
   );
