@@ -7,6 +7,7 @@ import GitHubStats from "@/components/GitHubStats";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import SocialIcons from "@/components/SocialIcons";
 import Footer from "@/components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -36,9 +37,14 @@ const Index = () => {
         </div>
         <Skills hideHeader />
         <GitHubStats />
+        <SocialIcons />
       </div>
     ),
-    projects: <Projects />,
+    projects: (
+      <div className="w-full h-full overflow-y-auto">
+        <Projects />
+      </div>
+    ),
     contact: (
       <div className="w-full h-full overflow-y-auto">
         <Contact />
