@@ -55,7 +55,7 @@ const Education = () => {
               </motion.div>
               <div className="flex-1">
                 <h3 className="text-lg font-bold mb-1">Bachelor of Technology in Computer Science and Engineering</h3>
-                <p className="text-primary font-semibold text-sm mb-1">Graphic Era Hill University, Bhimtal</p>
+                <p className="text-primary font-semibold text-sm mb-1"><p className="text-primary font-semibold text-sm mb-1">Graphic Era Hill University</p></p>
                 <p className="text-muted-foreground mb-3 text-xs">September 2022 – June 2026</p>
 
                 <div className="bg-muted/50 p-4 rounded-xl border border-border">
