@@ -97,7 +97,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Resume</h3>
               <p className="text-sm text-muted-foreground mb-4 flex-1">
-                Built for recruiters, focused on impact.
+                Explore my projects, skills, education, and everything I&apos;ve been working on.
               </p>
               <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] shadow-sm hover:shadow-md font-semibold rounded-md w-full h-10 mt-auto transition-all duration-300">
                 <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
