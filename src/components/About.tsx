@@ -54,7 +54,7 @@ const About = () => {
             <h3 className="text-xl font-bold mb-4 gradient-text">My Journey</h3>
             <div className="space-y-3 text-muted-foreground text-sm">
               <p className="leading-relaxed">
-                I am originally from <span className="text-primary font-semibold">Champawat, Uttarakhand</span>, and currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University, Bhimtal.
+                I am originally from <span className="text-primary font-semibold">Champawat, Uttarakhand</span>, and currently pursuing my B.Tech in Computer Science and Engineering at I am originally from <span className="text-primary font-semibold">Champawat, Uttarakhand</span>, and currently pursuing my B.Tech in Computer Science and Engineering at Graphic Era Hill University..
               </p>
               <p className="leading-relaxed">
                 I am passionate about technology, problem-solving, and exploring modern tools in software development. My focus is on building practical projects, learning new technologies, and continuously improving my skills as a developer.
