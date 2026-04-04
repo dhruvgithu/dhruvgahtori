@@ -82,7 +82,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Portfolio</h3>
               <p className="text-sm text-muted-foreground mb-4 flex-1">
-                Explore my projects, skills, education, and everything I&apos;ve been working on.
+                Built for recruiters, focused on impact.
               </p>
               <Button
                 size="sm"
