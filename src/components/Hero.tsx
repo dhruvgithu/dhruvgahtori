@@ -52,7 +52,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
               Get in Touch
             </Button>
           </div>
-          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm text-muted-foreground">
+          <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm text-muted-foreground">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
             Available for opportunities
           </div>
