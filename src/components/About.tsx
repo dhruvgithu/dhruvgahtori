@@ -14,8 +14,8 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            About <span className="gradient-text">Me</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
+            About Me
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>

@@ -36,8 +36,8 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
-              Skills & <span className="gradient-text">Expertise</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
+              Skills & Expertise
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
           </motion.div>
