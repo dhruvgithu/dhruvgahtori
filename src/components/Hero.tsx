@@ -22,7 +22,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
       </div>
 
-      <div className="flex-1 flex flex-col justify-center container mx-auto px-6 md:px-12 relative z-10">
+      <div className="flex-1 flex flex-col justify-center container mx-auto px-6 md:px-12 relative z-10 pt-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
