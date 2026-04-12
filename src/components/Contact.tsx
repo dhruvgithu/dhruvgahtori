@@ -50,11 +50,11 @@ const Contact = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <motion.div
             className="glass-strong p-5 rounded-2xl"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
@@ -67,37 +67,6 @@ const Contact = () => {
                 {sending ? "Sending..." : (<><Send className="w-4 h-4 mr-2" />Send Message</>)}
               </Button>
             </form>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="glass-strong p-5 rounded-2xl">
-              <h3 className="text-lg font-bold mb-4">Contact Information</h3>
-              <div className="space-y-3">
-                {contactInfo.map((info, index) => (
-                  <motion.a
-                    key={index}
-                    href={info.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ x: 5, scale: 1.02 }}
-                    className="flex items-center gap-3 p-3 bg-muted/50 rounded-xl hover:bg-primary/5 transition-all border border-transparent hover:border-primary/20"
-                  >
-                    <div className="bg-primary p-2.5 rounded-lg shrink-0">
-                      <info.icon className="w-4 h-4 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">{info.label}</p>
-                      <p className="font-semibold text-sm">{info.value}</p>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
           </motion.div>
         </div>
 
