@@ -35,7 +35,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-6 relative section-alt">
+    <section id="contact" className="pt-1 pb-6 relative section-alt">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-4"
