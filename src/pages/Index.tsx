@@ -70,7 +70,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="min-h-full w-full"
+            className="min-h-full w-full pt-16"
           >
             {sections[activeSection]}
           </motion.div>
