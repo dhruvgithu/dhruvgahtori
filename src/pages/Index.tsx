@@ -62,7 +62,7 @@ const Index = () => {
   return (
     <div className="h-screen w-screen overflow-hidden relative bg-background">
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <div ref={scrollRef} className="h-full w-full pt-16 overflow-y-auto">
+      <div ref={scrollRef} className="h-full w-full overflow-y-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
