@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, FolderOpen, Github, Linkedin, TreePine, Send, FileText } from "lucide-react";
+import { BookOpen, FolderOpen, Github, Linkedin, TreePine, Send, FileText, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import ParticleBackground from "./ParticleBackground";
 
@@ -51,8 +51,25 @@ const Hero = ({ onNavigate }: HeroProps) => {
             >
               Get in Touch
             </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-300 font-semibold px-6 rounded-md"
+            >
+              <a href="mailto:dhruvgahtori00@gmail.com">
+                <Mail className="w-4 h-4 mr-1.5" />
+                Email Me
+              </a>
+            </Button>
           </div>
-          <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm text-muted-foreground">
+          <a
+            href="mailto:dhruvgahtori00@gmail.com"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            dhruvgahtori00@gmail.com
+          </a>
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm text-muted-foreground w-fit">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
             Available for opportunities
           </div>
