@@ -9,10 +9,11 @@ interface HeroProps {
 
 const Hero = ({ onNavigate }: HeroProps) => {
   const socialLinks = [
-    { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu" },
-    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285" },
-    { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00" },
-    { icon: Send, label: "Telegram", link: "https://t.me/dhruvgahtori" },
+    { icon: Mail, label: "Email", link: "mailto:dhruvgahtori00@gmail.com", external: false },
+    { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu", external: true },
+    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285", external: true },
+    { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00", external: true },
+    { icon: Send, label: "Telegram", link: "https://t.me/dhruvgahtori", external: true },
   ];
 
   return (
@@ -123,7 +124,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
                 <a
                   key={index}
                   href={social.link}
-                  target="_blank"
+                  target={social.external ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 px-3 py-1.5 border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
                 >
@@ -131,13 +132,6 @@ const Hero = ({ onNavigate }: HeroProps) => {
                   {social.label}
                 </a>
               ))}
-              <a
-                href="mailto:dhruvgahtori00@gmail.com"
-                className="flex items-center gap-1.5 px-3 py-1.5 border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all"
-              >
-                <Mail className="w-4 h-4" />
-                Email
-              </a>
             </div>
             <p className="text-xs text-muted-foreground">
               © 2026 Dhruv Gahtori
