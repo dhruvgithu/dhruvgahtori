@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="py-4 border-t border-border relative">
@@ -11,6 +13,13 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground/80 mt-0.5">
               Uttarakhand, India
             </p>
+            <a
+              href="mailto:dhruvgahtori00@gmail.com"
+              className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5" />
+              dhruvgahtori00@gmail.com
+            </a>
           </div>
         </div>
       </div>
