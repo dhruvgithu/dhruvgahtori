@@ -1,6 +1,7 @@
-import { Github, Linkedin, TreePine, Send } from "lucide-react";
+import { Github, Linkedin, TreePine, Send, Mail } from "lucide-react";
 
 const socialLinks = [
+  { icon: Mail, label: "Email", link: "mailto:dhruvgahtori00@gmail.com" },
   { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu" },
   { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285" },
   { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00" },
@@ -14,7 +15,7 @@ const SocialIcons = () => {
         <a
           key={index}
           href={social.link}
-          target="_blank"
+          target={social.link.startsWith("mailto:") ? undefined : "_blank"}
           rel="noopener noreferrer"
           className="p-2.5 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
           title={social.label}
