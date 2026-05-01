@@ -53,29 +53,25 @@ const Index = () => {
     ),
   };
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0 });
   }, [activeSection]);
 
   return (
-    <div className="h-screen w-screen overflow-hidden relative bg-background">
+    <div className="min-h-screen w-full relative bg-background">
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <div ref={scrollRef} className="h-full w-full overflow-y-auto">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeSection}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="min-h-full w-full pt-16"
-          >
-            {sections[activeSection]}
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeSection}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="w-full pt-16"
+        >
+          {sections[activeSection]}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

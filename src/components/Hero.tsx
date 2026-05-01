@@ -100,7 +100,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
                 Explore my projects, skills, education, and everything I&apos;ve been working on.
               </p>
               <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] shadow-sm hover:shadow-md font-semibold rounded-md w-full h-10 mt-auto transition-all duration-300">
-                <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-1.5" />
                   Download Resume
                 </a>
