@@ -21,7 +21,7 @@ const Index = () => {
     about: <About />,
     education: <Education />,
     skills: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <div className="container mx-auto px-4 pt-6">
           <motion.div
             className="text-center mb-4"
@@ -41,12 +41,12 @@ const Index = () => {
       </div>
     ),
     projects: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <Projects />
       </div>
     ),
     contact: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <Contact />
         <Footer />
       </div>

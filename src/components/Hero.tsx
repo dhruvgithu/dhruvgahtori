@@ -16,7 +16,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
   ];
 
   return (
-    <section id="home" className="w-full h-full flex flex-col relative overflow-hidden">
+    <section id="home" className="w-full min-h-screen flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <ParticleBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
