@@ -21,7 +21,7 @@ const Index = () => {
     about: <About />,
     education: <Education />,
     skills: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <div className="container mx-auto px-4 pt-6">
           <motion.div
             className="text-center mb-4"
@@ -41,41 +41,37 @@ const Index = () => {
       </div>
     ),
     projects: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <Projects />
       </div>
     ),
     contact: (
-      <div className="w-full h-full overflow-y-auto">
+      <div className="w-full">
         <Contact />
         <Footer />
       </div>
     ),
   };
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0 });
   }, [activeSection]);
 
   return (
-    <div className="h-screen w-screen overflow-hidden relative bg-background">
+    <div className="min-h-screen w-full relative bg-background">
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <div ref={scrollRef} className="h-full w-full overflow-y-auto">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeSection}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="min-h-full w-full pt-16"
-          >
-            {sections[activeSection]}
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeSection}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="w-full pt-16"
+        >
+          {sections[activeSection]}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

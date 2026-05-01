@@ -16,7 +16,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
   ];
 
   return (
-    <section id="home" className="w-full h-full flex flex-col relative overflow-hidden">
+    <section id="home" className="w-full min-h-screen flex flex-col relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <ParticleBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
@@ -100,7 +100,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
                 Explore my projects, skills, education, and everything I&apos;ve been working on.
               </p>
               <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] shadow-sm hover:shadow-md font-semibold rounded-md w-full h-10 mt-auto transition-all duration-300">
-                <a href="/DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf" rel="noopener noreferrer">
                   <FileText className="w-4 h-4 mr-1.5" />
                   Download Resume
                 </a>
