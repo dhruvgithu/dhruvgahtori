@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Education from "@/components/Education";
 import GitHubStats from "@/components/GitHubStats";
 import Projects from "@/components/Projects";
@@ -11,14 +10,13 @@ import SocialIcons from "@/components/SocialIcons";
 import Footer from "@/components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 
-export type SectionKey = "home" | "about" | "education" | "skills" | "projects" | "contact";
+export type SectionKey = "home" | "education" | "skills" | "projects" | "contact";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>("home");
 
   const sections: Record<SectionKey, React.ReactNode> = {
     home: <Hero onNavigate={(s) => setActiveSection(s as SectionKey)} />,
-    about: <About />,
     education: <Education />,
     skills: (
       <div className="w-full">
