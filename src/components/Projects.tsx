@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Play } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "./ui/button";
 import SocialIcons from "./SocialIcons";
 
