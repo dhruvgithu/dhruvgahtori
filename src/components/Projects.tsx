@@ -87,12 +87,6 @@ const Projects = () => {
                     View on GitHub
                   </a>
                 </Button>
-                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
-                  <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                    <Play className="w-3 h-3 mr-1.5" />
-                    Live
-                  </a>
-                </Button>
               </div>
             </motion.div>
           ))}
