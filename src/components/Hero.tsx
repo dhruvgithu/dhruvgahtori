@@ -54,7 +54,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             </Button>
           </div>
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm text-muted-foreground w-fit">
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-green-700" />
             Available for opportunities
           </div>
         </motion.div>
