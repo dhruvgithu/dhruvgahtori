@@ -73,19 +73,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        <motion.a
-          href="https://www.google.com/maps/search/?api=1&query=Champawat%2C%20Uttarakhand%2C%20India"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-        >
-          <MapPin className="w-4 h-4 text-primary" />
-          <span>Champawat, Uttarakhand, India</span>
-        </motion.a>
 
         <SocialIcons />
       </div>

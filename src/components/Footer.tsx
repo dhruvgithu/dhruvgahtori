@@ -10,9 +10,6 @@ const Footer = () => {
               Designed & Built by{" "}
               <span className="text-primary font-bold">Dhruv Gahtori</span>
             </p>
-            <p className="text-xs text-muted-foreground/80 mt-0.5">
-              Uttarakhand, India
-            </p>
             <a
               href="mailto:dhruvgahtori00@gmail.com"
               className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
