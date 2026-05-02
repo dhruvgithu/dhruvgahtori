@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -72,6 +72,20 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
+
+        <motion.a
+          href="https://www.google.com/maps/search/?api=1&query=Champawat%2C%20Uttarakhand%2C%20India"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          <MapPin className="w-4 h-4 text-primary" />
+          <span>Champawat, Uttarakhand, India</span>
+        </motion.a>
 
         <SocialIcons />
       </div>

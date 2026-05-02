@@ -14,7 +14,6 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
 
   const navItems: { name: string; key: SectionKey }[] = [
     { name: "Home", key: "home" },
-    { name: "About", key: "about" },
     { name: "Education", key: "education" },
     { name: "Skills", key: "skills" },
     { name: "Projects", key: "projects" },
