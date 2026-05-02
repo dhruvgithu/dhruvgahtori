@@ -66,7 +66,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
           className="mt-10"
         >
           <h2 className="text-lg font-bold mb-4 text-foreground">Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl items-stretch">
             <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
               <h3 className="text-base font-bold text-foreground mb-2">Articles</h3>
               <p className="text-sm text-muted-foreground mb-4 flex-1">
@@ -77,21 +77,6 @@ const Hero = ({ onNavigate }: HeroProps) => {
                   <BookOpen className="w-4 h-4 mr-1.5" />
                   Read Articles
                 </a>
-              </Button>
-            </div>
-
-            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:border-primary/30 hover:shadow-md transition-all duration-300 flex h-full flex-col">
-              <h3 className="text-base font-bold text-foreground mb-2">Portfolio</h3>
-              <p className="text-sm text-muted-foreground mb-4 flex-1">
-                Built for recruiters, focused on impact.
-              </p>
-              <Button
-                size="sm"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10 mt-auto"
-                onClick={() => onNavigate?.("about")}
-              >
-                <FolderOpen className="w-4 h-4 mr-1.5" />
-                View Portfolio
               </Button>
             </div>
 
