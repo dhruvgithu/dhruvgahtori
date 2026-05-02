@@ -31,8 +31,6 @@ const Projects = () => {
     },
   ];
 
-  const liveLink = "https://www.youtube.com/@dhruvgahtori2283";
-
   return (
     <section id="projects" className="py-6 relative w-full">
       <div className="container mx-auto px-4">
