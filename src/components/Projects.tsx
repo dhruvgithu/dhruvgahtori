@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Play } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "./ui/button";
 import SocialIcons from "./SocialIcons";
 
@@ -30,8 +30,6 @@ const Projects = () => {
       github: "https://github.com/dhruvgithu/Predictive-analytics-for-sales-forecasting-/tree/main/Predictive-Analytics-for-Sales-main",
     },
   ];
-
-  const liveLink = "https://www.youtube.com/@dhruvgahtori2283";
 
   return (
     <section id="projects" className="py-6 relative w-full">
@@ -85,12 +83,6 @@ const Projects = () => {
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-3 h-3 mr-1.5" />
                     View on GitHub
-                  </a>
-                </Button>
-                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
-                  <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                    <Play className="w-3 h-3 mr-1.5" />
-                    Live
                   </a>
                 </Button>
               </div>
