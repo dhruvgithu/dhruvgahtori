@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { BookOpen, Github, Linkedin, TreePine, Send, FileText, Mail, MapPin, GraduationCap, Code2, Brain, Wrench, Sparkles } from "lucide-react";
+import { BookOpen, FileText } from "lucide-react";
 import { Button } from "./ui/button";
-import profilePhoto from "@/assets/dhruv-photo.jpg";
+import ProfileSidebar from "./ProfileSidebar";
 
 interface HeroProps {
   onNavigate?: (section: string) => void;
