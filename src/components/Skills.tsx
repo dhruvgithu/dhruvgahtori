@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Code2, Brain, Wrench } from "lucide-react";
-import SocialIcons from "./SocialIcons";
 
 interface SkillsProps {
   hideHeader?: boolean;

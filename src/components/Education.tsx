@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { GraduationCap, BookOpen, Award, ExternalLink } from "lucide-react";
-import SocialIcons from "./SocialIcons";
 
 const certifications = [
   {
@@ -122,7 +121,6 @@ const Education = () => {
           </motion.div>
         </div>
 
-        <SocialIcons />
       </div>
     </section>
   );
