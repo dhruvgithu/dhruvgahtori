@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Code } from "lucide-react";
 import profilePhoto from "@/assets/dhruv-photo.jpg";
-import SocialIcons from "./SocialIcons";
 
 const About = () => {
   return (
@@ -88,7 +87,6 @@ const About = () => {
           </div>
         </motion.div>
 
-        <SocialIcons />
       </div>
     </section>
   );

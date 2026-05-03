@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { Button } from "./ui/button";
-import SocialIcons from "./SocialIcons";
 
 const Projects = () => {
   const projects = [
@@ -90,7 +89,6 @@ const Projects = () => {
           ))}
         </div>
 
-        <SocialIcons />
       </div>
     </section>
   );

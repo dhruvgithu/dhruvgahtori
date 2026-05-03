@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
-import SocialIcons from "./SocialIcons";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -74,7 +73,6 @@ const Contact = () => {
         </div>
 
 
-        <SocialIcons />
       </div>
     </section>
   );
