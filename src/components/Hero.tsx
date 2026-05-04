@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BookOpen, FileText } from "lucide-react";
+// FileText still used in Resume card below
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
 
@@ -27,7 +28,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
 
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
               <p>
-                Hi, I&apos;m <span className="text-foreground font-semibold">Dhruv Gahtori</span> — a B.Tech Computer Science student passionate about building intelligent systems and clean, useful software. I enjoy turning complex problems into simple, elegant solutions.
+                B.Tech Computer Science student passionate about building intelligent systems. I work on problem-solving and creating AI-powered solutions that tackle real-world challenges.
               </p>
             </div>
 
@@ -41,17 +42,10 @@ const Hero = ({ onNavigate }: HeroProps) => {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="font-semibold rounded-md"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md"
                 onClick={() => onNavigate?.("contact")}
               >
                 Get in Touch
-              </Button>
-              <Button asChild size="lg" variant="outline" className="font-semibold rounded-md">
-                <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf">
-                  <FileText className="w-4 h-4 mr-1.5" />
-                  Resume
-                </a>
               </Button>
             </div>
 
