@@ -19,12 +19,12 @@ const ProfileSidebar = () => {
       className="bg-card border border-border rounded-2xl p-6 shadow-sm lg:sticky lg:top-20"
     >
       <div className="flex flex-col items-center text-center">
-        <div className="w-32 h-32 rounded-2xl overflow-hidden border border-border shadow-sm mb-4">
+        <div className="w-40 h-40 rounded-2xl overflow-hidden border border-border shadow-sm mb-4 bg-muted">
           <img src={profilePhoto} alt="Dhruv Gahtori" className="w-full h-full object-cover" />
         </div>
-        <h2 className="text-xl font-bold text-foreground">Dhruv Gahtori</h2>
-        <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 border border-border rounded-full text-xs font-semibold text-foreground">
-          <span className="w-2 h-2 rounded-full bg-green-700" />
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground">Dhruv Gahtori</h2>
+        <div className="mt-3 inline-flex items-center gap-2 px-4 py-2 border border-border rounded-full text-sm font-semibold text-foreground">
+          <span className="w-2.5 h-2.5 rounded-full bg-green-700" />
           Available for opportunities
         </div>
       </div>
