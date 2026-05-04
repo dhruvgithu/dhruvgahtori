@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BookOpen, FileText } from "lucide-react";
+// FileText still used in Resume card below
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
 
