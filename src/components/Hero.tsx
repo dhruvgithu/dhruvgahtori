@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
 import { BookOpen, FileText } from "lucide-react";
-// FileText still used in Resume card below
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
+import SectionNav from "./SectionNav";
+import type { SectionKey } from "@/pages/Index";
 
 interface HeroProps {
   onNavigate?: (section: string) => void;
+  activeSection: SectionKey;
+  setActiveSection: (section: SectionKey) => void;
 }
 
-const Hero = ({ onNavigate }: HeroProps) => {
+const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
   return (
     <section id="home" className="w-full min-h-screen relative">
-      <div className="container mx-auto px-4 md:px-6 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 items-start">
+      <div className="container mx-auto px-4 md:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 items-start max-w-6xl mx-auto">
           <ProfileSidebar />
 
           <motion.div
@@ -21,6 +24,8 @@ const Hero = ({ onNavigate }: HeroProps) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm min-w-0"
           >
+            <SectionNav activeSection={activeSection} setActiveSection={setActiveSection} />
+
             <div className="mb-6">
               <h1 className="text-3xl md:text-4xl font-bold text-foreground">About Me</h1>
               <div className="mt-2 h-1 w-16 bg-primary rounded-full" />
