@@ -38,7 +38,7 @@ const Index = () => {
   const wrapWithSidebar = (node: React.ReactNode, extra?: React.ReactNode) => (
     <section className="w-full min-h-screen">
       <div className="container mx-auto px-4 md:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 items-stretch max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 items-start max-w-6xl mx-auto">
           <ProfileSidebar />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
