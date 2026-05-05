@@ -16,7 +16,7 @@ const navItems: { name: string; key: SectionKey }[] = [
 
 const SectionNav = ({ activeSection, setActiveSection }: SectionNavProps) => {
   return (
-    <div className="flex justify-end -mt-2 -mr-2 mb-4">
+    <div className="flex justify-end -mt-3 -mr-3 mb-2">
       <div className="inline-flex items-center gap-1 bg-muted/60 border border-border rounded-full px-2 py-1.5">
         {navItems.map((item) => (
           <button
