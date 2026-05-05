@@ -16,7 +16,7 @@ const ProfileSidebar = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-card border border-border rounded-2xl p-6 shadow-sm h-full flex flex-col"
+      className="bg-card border border-border rounded-2xl p-6 shadow-sm lg:sticky lg:top-4"
     >
       <div className="flex flex-col items-center text-center">
         <div className="w-40 h-40 rounded-2xl overflow-hidden border border-border shadow-sm mb-4 bg-muted">
