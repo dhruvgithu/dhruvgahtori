@@ -44,9 +44,12 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm min-w-0"
+            className="relative bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm min-w-0"
           >
-            <div className="mb-8 flex justify-end">
+            <div className="absolute top-6 right-6 z-10 hidden md:block">
+              <SectionNav activeSection={activeSection} setActiveSection={setActiveSection} />
+            </div>
+            <div className="mb-6 flex md:hidden">
               <SectionNav activeSection={activeSection} setActiveSection={setActiveSection} />
             </div>
             {node}
