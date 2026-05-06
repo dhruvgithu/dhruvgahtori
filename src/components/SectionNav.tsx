@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import type { SectionKey } from "@/pages/Index";
 
 interface SectionNavProps {
@@ -25,18 +24,11 @@ const SectionNav = ({ activeSection, setActiveSection }: SectionNavProps) => {
             onClick={() => setActiveSection(item.key)}
             className={`relative px-3 md:px-4 py-1.5 text-xs md:text-sm font-medium rounded-full transition-colors ${
               activeSection === item.key
-                ? "text-primary-foreground"
+                ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            {activeSection === item.key && (
-              <motion.span
-                layoutId="section-nav-pill"
-                className="pointer-events-none absolute inset-0 bg-primary rounded-full"
-                transition={{ type: "spring", stiffness: 400, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10">{item.name}</span>
+            {item.name}
           </button>
         ))}
       </div>
