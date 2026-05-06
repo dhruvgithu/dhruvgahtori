@@ -52,8 +52,10 @@ const Index = () => {
             <div className="mb-6 flex md:hidden">
               <SectionNav activeSection={activeSection} setActiveSection={setActiveSection} />
             </div>
-            {node}
-            {extra}
+            <div className="md:pt-16">
+              {node}
+              {extra}
+            </div>
           </motion.div>
         </div>
       </div>
