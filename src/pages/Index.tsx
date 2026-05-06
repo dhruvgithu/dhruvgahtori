@@ -71,7 +71,7 @@ const Index = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
   }, [activeSection]);
 
   return (
