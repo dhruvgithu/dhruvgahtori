@@ -25,8 +25,8 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
   ];
 
   return (
-    <div id="skills" className={hideHeader ? "pb-6 relative" : "py-6 relative"}>
-      <div className="container mx-auto px-4">
+    <div id="skills" className={hideHeader ? "pb-2 relative" : "relative"}>
+      <div className="w-full">
         {!hideHeader && (
           <motion.div
             className="text-center mb-4"
@@ -42,7 +42,7 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
           </motion.div>
         )}
 
-        <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 w-full">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -51,7 +51,7 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -3 }}
-              className="glass-strong p-5 rounded-2xl transition-all duration-300 hover:shadow-md"
+              className="glass-strong p-8 rounded-[20px] transition-all duration-300 hover:shadow-md flex flex-col h-full"
             >
               <div className="flex items-center gap-3 mb-4">
                 <motion.div

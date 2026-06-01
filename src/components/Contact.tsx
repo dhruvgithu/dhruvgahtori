@@ -34,10 +34,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="pt-1 pb-6 relative section-alt">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative w-full">
+      <div className="w-full">
         <motion.div
-          className="text-center mb-4"
+          className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,14 +47,14 @@ const Contact = () => {
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-3" />
-          <p className="text-foreground text-lg md:text-xl mt-6 mb-6 font-extrabold text-center mx-auto max-w-3xl px-4">
+          <p className="text-foreground text-base md:text-lg mt-4 mb-2 font-semibold text-center mx-auto max-w-3xl">
             Have an idea, project, or opportunity? Let's connect and turn it into something real.
           </p>
         </motion.div>
 
         <div className="max-w-xl mx-auto">
           <motion.div
-            className="glass-strong p-5 rounded-2xl"
+            className="glass-strong p-8 rounded-[20px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
