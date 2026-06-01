@@ -21,8 +21,8 @@ const certifications = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-8 relative w-full section-alt">
-      <div className="container mx-auto px-4">
+    <section id="education" className="relative w-full">
+      <div className="w-full">
         <motion.div
           className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -36,9 +36,9 @@ const Education = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="w-full space-y-6">
           <motion.div
-            className="glass-strong p-6 rounded-2xl"
+            className="glass-strong p-8 rounded-[20px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -85,7 +85,7 @@ const Education = () => {
           </motion.div>
 
           <motion.div
-            className="glass-strong p-6 rounded-2xl"
+            className="glass-strong p-8 rounded-[20px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,7 +95,7 @@ const Education = () => {
               <Award className="w-5 h-5 text-primary" />
               <h3 className="text-lg font-bold">Certifications</h3>
             </div>
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
                 <a
                   key={index}

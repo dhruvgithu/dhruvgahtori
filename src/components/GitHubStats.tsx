@@ -74,8 +74,8 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section id="github" className="py-6 relative">
-      <div className="container mx-auto px-4">
+    <section id="github" className="pt-8 relative">
+      <div className="w-full">
         <motion.div
           className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -89,8 +89,8 @@ const GitHubStats = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="max-w-6xl mx-auto space-y-5">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+        <div className="w-full space-y-6">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

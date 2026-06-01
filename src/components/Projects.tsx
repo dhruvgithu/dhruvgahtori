@@ -31,8 +31,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-6 relative w-full">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="relative w-full">
+      <div className="w-full">
         <motion.div
           className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="glass-strong p-5 rounded-2xl group transition-all duration-300 cursor-default hover:shadow-md flex flex-col h-full"
+              className="glass-strong p-8 rounded-[20px] group transition-all duration-300 cursor-default hover:shadow-md flex flex-col h-full"
             >
               <div className="h-1 w-full bg-primary rounded-full mb-4 group-hover:h-1.5 transition-all" />
               <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-all">
