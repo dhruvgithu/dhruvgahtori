@@ -4,7 +4,6 @@ import profilePhoto from "@/assets/dhruv-photo.jpg";
 
 const ProfileSidebar = () => {
   const socialLinks = [
-    { icon: Mail, label: "Email", link: "mailto:dhruvgahtori00@gmail.com", external: false },
     { icon: Github, label: "GitHub", link: "https://github.com/dhruvgithu", external: true },
     { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/in/dhruv-gahtori-8b7b56285", external: true },
     { icon: TreePine, label: "Linktree", link: "https://linktr.ee/dhruvgahtori00", external: true },
