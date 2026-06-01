@@ -58,7 +58,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="glass-strong p-5 rounded-2xl group transition-all duration-300 cursor-default hover:shadow-md"
+              className="glass-strong p-5 rounded-2xl group transition-all duration-300 cursor-default hover:shadow-md flex flex-col h-full"
             >
               <div className="h-1 w-full bg-primary rounded-full mb-4 group-hover:h-1.5 transition-all" />
               <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-all">
@@ -77,8 +77,8 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-2 flex-wrap">
-                <Button asChild variant="outline" size="sm" className="border-border text-foreground hover:bg-primary/5 hover:border-primary/50 rounded-full transition-all text-xs">
+              <div className="flex gap-2 flex-wrap mt-auto">
+                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-3 h-3 mr-1.5" />
                     View on GitHub

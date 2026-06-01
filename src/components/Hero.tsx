@@ -80,7 +80,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
               <div className="flex-1 bg-background border border-border rounded-xl p-5 flex flex-col">
                 <h3 className="text-base font-bold text-foreground mb-1">Resume</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-1">
-                  Explore my projects, skills, and education — everything I&apos;ve been working on.
+                  Explore my projects, skills, and education everything I&apos;ve been working on.
                 </p>
                 <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10">
                   <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf">

@@ -5,8 +5,7 @@ const Footer = () => {
         <div className="flex items-center justify-center">
           <div className="text-center">
             <p className="text-muted-foreground text-sm">
-              Designed & Built by{" "}
-              <span className="text-primary font-bold">Dhruv Gahtori</span>
+              © 2026 <span className="text-primary font-bold">Dhruv Gahtori</span>
             </p>
           </div>
         </div>
