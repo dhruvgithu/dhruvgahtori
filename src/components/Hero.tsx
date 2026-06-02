@@ -13,9 +13,9 @@ interface HeroProps {
 
 const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
   return (
-    <section id="home" className="w-full min-h-screen relative">
-      <div className="mx-auto px-4 md:px-6 py-8 max-w-[1400px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+    <section id="home" className="w-full relative">
+      <div className="mx-auto px-4 md:px-6 py-8 max-w-[1250px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 items-start">
           <ProfileSidebar />
 
           <motion.div
