@@ -22,7 +22,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative bg-card border border-border rounded-[20px] p-8 shadow-sm min-w-0"
+            className="relative bg-card border border-border rounded-[20px] p-8 shadow-sm min-w-0 h-fit lg:min-h-[566px]"
           >
             <div className="absolute top-0 right-0 z-20 hidden md:block">
               <SectionNav activeSection={activeSection} setActiveSection={setActiveSection} />
