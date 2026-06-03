@@ -67,7 +67,7 @@ const Index = () => {
     education: wrapWithSidebar(<Education />),
     skills: wrapWithSidebar(skillsContent),
     projects: wrapWithSidebar(<Projects />),
-    contact: wrapWithSidebar(<Contact />, <Footer />),
+    contact: wrapWithSidebar(<Contact />),
   };
 
   useEffect(() => {
