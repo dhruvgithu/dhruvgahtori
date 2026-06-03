@@ -88,6 +88,7 @@ const Index = () => {
           {sections[activeSection]}
         </motion.div>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 };
