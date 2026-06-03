@@ -17,10 +17,10 @@ const Projects = () => {
       github: "https://github.com/dhruvgithu/multiple-disease-prediction-system",
     },
     {
-      title: "Customer Churn Prediction System",
-      description: "Developed a system to identify customers likely to stop using a service. Achieved around 85% accuracy through hyperparameter tuning.",
-      tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
-      github: "https://github.com/dhruvgithu/Customer-Churn-Prediction",
+      title: "RAG-Based Document Intelligence System",
+      description: "Developed a RAG-based Document Intelligence System that allows users to upload PDFs. Used FAISS and OpenAI embeddings for accurate document retrieval and optimized processing of 50+ page documents with a chunking pipeline.",
+      tech: ["Python", "LangChain", "FAISS", "OpenAI API", "Streamlit"],
+      github: "https://github.com/dhruvgithu/RAG-Based-Document-Intelligence-System/tree/main/ai-document-qa-rag-main/ai-document-qa-rag-main",
     },
     {
       title: "Sales Forecasting using Predictive Analytics",
