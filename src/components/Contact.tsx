@@ -48,7 +48,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-3" />
           <p className="text-foreground text-base md:text-lg mt-4 mb-2 font-semibold text-center mx-auto max-w-3xl">
-            Have an idea, project, or opportunity? Let's connect and turn it into something real.
+            Have an idea, project or opportunity? Let's connect and turn it into something real.
           </p>
         </motion.div>
 
