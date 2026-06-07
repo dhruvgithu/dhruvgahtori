@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Code2, Brain, Wrench, Database } from "lucide-react";
 
 interface SkillsProps {
   hideHeader?: boolean;
@@ -8,18 +9,22 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
   const skillCategories = [
     {
       title: "Programming Languages",
+      icon: Code2,
       skills: ["Python", "C", "C++", "Java", "JavaScript"],
     },
     {
       title: "AI / ML",
+      icon: Brain,
       skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "NLP", "FAISS", "LangChain"],
     },
     {
       title: "Tools & Technologies",
+      icon: Wrench,
       skills: ["Git", "GitHub", "Docker", "AWS", "Django", "Postman", "Jupyter Notebook", "Linux"],
     },
     {
       title: "Databases",
+      icon: Database,
       skills: ["MySQL", "MongoDB", "SQLite"],
     },
   ];
@@ -53,9 +58,12 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               whileHover={{ y: -3 }}
               className="glass-strong p-8 rounded-[20px] transition-all duration-300 hover:shadow-md flex flex-col h-full"
             >
-              <h3 className="text-xl font-bold text-center mb-6 text-foreground">
-                {category.title}
-              </h3>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <category.icon className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-bold text-foreground">
+                  {category.title}
+                </h3>
+              </div>
               <ul className="space-y-2.5 pl-2">
                 {category.skills.map((skill, skillIndex) => (
                   <li
