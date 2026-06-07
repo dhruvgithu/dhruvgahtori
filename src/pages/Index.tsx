@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
 import Education from "@/components/Education";
-import GitHubStats from "@/components/GitHubStats";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
@@ -31,7 +30,6 @@ const Index = () => {
         </motion.div>
       </div>
       <Skills hideHeader />
-      <GitHubStats />
     </div>
   );
 
