@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Code2, Brain, Wrench, Database } from "lucide-react";
 
 interface SkillsProps {
   hideHeader?: boolean;
@@ -8,22 +7,18 @@ interface SkillsProps {
 const Skills = ({ hideHeader = false }: SkillsProps) => {
   const skillCategories = [
     {
-      icon: Code2,
       title: "Programming Languages",
       skills: ["Python", "C", "C++", "Java", "JavaScript"],
     },
     {
-      icon: Brain,
       title: "AI / ML",
       skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "NLP", "FAISS", "LangChain"],
     },
     {
-      icon: Wrench,
       title: "Tools & Technologies",
       skills: ["Git", "GitHub", "Docker", "AWS", "Django", "Postman", "Jupyter Notebook", "Linux"],
     },
     {
-      icon: Database,
       title: "Databases",
       skills: ["MySQL", "MongoDB", "SQLite"],
     },
@@ -31,23 +26,23 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
 
   return (
     <div id="skills" className={hideHeader ? "pb-2 relative" : "relative"}>
-      <div className="w-full">
+      <div className="w-full max-w-6xl mx-auto">
         {!hideHeader && (
           <motion.div
-            className="text-center mb-4"
+            className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
-              Skills & Expertise
+              Skills &amp; Expertise
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
           </motion.div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -58,31 +53,23 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               whileHover={{ y: -3 }}
               className="glass-strong p-8 rounded-[20px] transition-all duration-300 hover:shadow-md flex flex-col h-full"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <motion.div
-                  className="bg-primary p-2 rounded-lg"
-                  whileHover={{ rotate: 10, scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <category.icon className="w-5 h-5 text-primary-foreground" />
-                </motion.div>
-                <h3 className="text-lg font-bold">{category.title}</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xl font-bold text-center mb-6 text-foreground">
+                {category.title}
+              </h3>
+              <ul className="space-y-2.5 pl-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <motion.span
+                  <li
                     key={skillIndex}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="px-3 py-1.5 bg-muted border border-border rounded-full text-xs font-medium hover:border-primary/50 hover:bg-primary/5 transition-all cursor-default"
+                    className="flex items-center gap-3 text-foreground/85"
                   >
-                    {skill}
-                  </motion.span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span className="text-[15px]">{skill}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
         </div>
-
       </div>
     </div>
   );
