@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Code2, Brain, Wrench, Database } from "lucide-react";
 
 interface SkillsProps {
   hideHeader?: boolean;
@@ -8,18 +9,22 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
   const skillCategories = [
     {
       title: "Programming Languages",
+      icon: Code2,
       skills: ["Python", "C", "C++", "Java", "JavaScript"],
     },
     {
       title: "AI / ML",
+      icon: Brain,
       skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "NLP", "FAISS", "LangChain"],
     },
     {
       title: "Tools & Technologies",
+      icon: Wrench,
       skills: ["Git", "GitHub", "Docker", "AWS", "Django", "Postman", "Jupyter Notebook", "Linux"],
     },
     {
       title: "Databases",
+      icon: Database,
       skills: ["MySQL", "MongoDB", "SQLite"],
     },
   ];
