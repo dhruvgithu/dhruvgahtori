@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       title: "Multiple Disease Prediction System",
-      description: "Machine Learning-based web application using TensorFlow and Scikit-learn for early diagnosis of diseases with <2 sec latency.",
+      description: "Developed a Django-based web application for early disease prediction. Implemented data preprocessing techniques such as normalization, feature engineering, and missing value handling to improve model accuracy, while enabling real-time predictions with low latency.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       github: "https://github.com/dhruvgithu/multiple-disease-prediction-system",
     },
