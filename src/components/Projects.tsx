@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Projects = () => {
@@ -27,6 +27,13 @@ const Projects = () => {
       description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       github: "https://github.com/dhruvgithu/Predictive-analytics-for-sales-forecasting-/tree/main/Predictive-Analytics-for-Sales-main",
+    },
+    {
+      title: "Expense Tracker",
+      description: "A full-stack expense tracking application built with Node.js + Express (backend) and React + Vite (frontend). Users can log daily expenses across categories, view summaries, and visualize spending with charts.",
+      tech: ["Node.js", "Express", "React", "Vite"],
+      github: "https://github.com/dhruvgithu/expense-tracker",
+      demo: "https://expense-tracker-sable-five-33.vercel.app",
     },
   ];
 
@@ -81,9 +88,17 @@ const Projects = () => {
                 <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-3 h-3 mr-1.5" />
-                    View on GitHub
+                    GitHub
                   </a>
                 </Button>
+                {project.demo && (
+                  <Button asChild size="sm" className="rounded-full transition-all text-xs opacity-50 blur-[0.5px] pointer-events-none">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-3 h-3 mr-1.5" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
               </div>
             </motion.div>
           ))}
