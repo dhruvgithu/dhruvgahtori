@@ -92,7 +92,7 @@ const Projects = () => {
                   </a>
                 </Button>
                 {project.demo && (
-                  <Button asChild size="sm" className="rounded-full transition-all text-xs opacity-50 blur-[0.5px] pointer-events-none">
+                  <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-3 h-3 mr-1.5" />
                       Live Demo
