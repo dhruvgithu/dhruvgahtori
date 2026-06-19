@@ -11,6 +11,13 @@ const Projects = () => {
       github: "https://github.com/dhruvgithu/ANPR",
     },
     {
+      title: "Expense Tracker",
+      description: "Developed a full-stack expense tracking application using Node.js, Express, React, and Vite. Users can manage daily expenses, track spending by category, and view insights through interactive charts and summaries.",
+      tech: ["Node.js", "Express", "React", "Vite"],
+      github: "https://github.com/dhruvgithu/expense-tracker",
+      demo: "https://expense-tracker-sable-five-33.vercel.app",
+    },
+    {
       title: "Multiple Disease Prediction System",
       description: "Machine Learning-based web application using TensorFlow and Scikit-learn for early diagnosis of diseases with <2 sec latency.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
@@ -27,13 +34,6 @@ const Projects = () => {
       description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       github: "https://github.com/dhruvgithu/Predictive-analytics-for-sales-forecasting-/tree/main/Predictive-Analytics-for-Sales-main",
-    },
-    {
-      title: "Expense Tracker",
-      description: "A full-stack expense tracking application built with Node.js + Express (backend) and React + Vite (frontend). Users can log daily expenses across categories, view summaries, and visualize spending with charts.",
-      tech: ["Node.js", "Express", "React", "Vite"],
-      github: "https://github.com/dhruvgithu/expense-tracker",
-      demo: "https://expense-tracker-sable-five-33.vercel.app",
     },
   ];
 
