@@ -8,7 +8,7 @@ const Projects = () => {
       title: "Automated Number Plate Recognition",
       description: "A computer vision project that detects vehicle number plates and extracts text from them in real time. It also sends automatic notifications when a registered vehicle is recognized.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
-      github: "https://github.com/dhruvgithu/ANPR",
+      github: "https://github.com/dhruvgithu/Automatic-number-plate-recognition",
     },
     {
       title: "Expense Tracker",
