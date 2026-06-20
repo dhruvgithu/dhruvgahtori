@@ -5,21 +5,21 @@ import { Button } from "./ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "Automatic Number Plate Recognition",
-      description: "Built using Python and OpenCV for real-time vehicle detection and license plate extraction with Haar Cascade Algorithm and OCR.",
+      title: "Automated Number Plate Recognition",
+      description: "A computer vision project that detects vehicle number plates and extracts text from them in real time. It also sends automatic notifications when a registered vehicle is recognized.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
       github: "https://github.com/dhruvgithu/ANPR",
     },
     {
       title: "Expense Tracker",
-      description: "Developed a full-stack expense tracking application using Node.js, Express, React, and Vite. Users can manage daily expenses, track spending by category, and view insights through interactive charts and summaries.",
+      description: "A full-stack expense management application that helps users record daily expenses, organize transactions by category, and monitor spending through an interactive dashboard.",
       tech: ["Node.js", "Express", "React", "Vite"],
       github: "https://github.com/dhruvgithu/expense-tracker",
       demo: "https://expense-tracker-sable-five-33.vercel.app",
     },
     {
       title: "Multiple Disease Prediction System",
-      description: "Developed a Django-based web application for early disease prediction. Implemented data preprocessing techniques such as normalization, feature engineering, and missing value handling to improve model accuracy, while enabling real-time predictions with low latency.",
+      description: "A web application that predicts diseases using machine learning models and user health data. The system provides quick predictions through a simple and user-friendly interface.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       github: "https://github.com/dhruvgithu/multiple-disease-prediction-system",
     },
@@ -30,8 +30,8 @@ const Projects = () => {
       github: "https://github.com/dhruvgithu/RAG-Based-Document-Intelligence-System/tree/main/ai-document-qa-rag-main/ai-document-qa-rag-main",
     },
     {
-      title: "Sales Forecasting using Predictive Analytics",
-      description: "Used regression models to predict future sales and improve business decision-making. Achieved around 80% prediction accuracy.",
+      title: "Sales Forecasting Using Predictive Analytics",
+      description: "A machine learning project that predicts future sales based on historical data. It helps businesses understand trends and make better planning decisions.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
       github: "https://github.com/dhruvgithu/Predictive-analytics-for-sales-forecasting-/tree/main/Predictive-Analytics-for-Sales-main",
     },
@@ -51,9 +51,6 @@ const Projects = () => {
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto text-sm">
-            Innovative AI/ML solutions solving real-world problems
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 w-full">
