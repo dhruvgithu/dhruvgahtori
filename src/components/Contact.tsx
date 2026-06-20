@@ -63,7 +63,7 @@ const Contact = () => {
             <h3 className="text-lg font-bold mb-4">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-3">
               <Input name="from_name" type="text" placeholder="Your Name" required className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
-              <Input name="from_email" type="email" placeholder="your.email@example.com" required className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
+              <Input name="from_email" type="email" placeholder="Your email" required className="bg-background border-border focus:border-primary focus:ring-primary/20 rounded-xl text-sm" />
               <Textarea name="message" placeholder="Your message..." rows={3} required className="bg-background border-border focus:border-primary focus:ring-primary/20 resize-none rounded-xl text-sm" />
               <Button type="submit" disabled={sending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-5 rounded-full text-sm">
                 {sending ? "Sending..." : (<><Send className="w-4 h-4 mr-2" />Send Message</>)}
