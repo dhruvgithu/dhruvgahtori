@@ -5,12 +5,14 @@ import { Button } from "./ui/button";
 const Projects = () => {
   const projects = [
     {
+      category: "Computer Vision",
       title: "Automated Number Plate Recognition",
       description: "A computer vision project that detects vehicle number plates and extracts text from them in real time. It also sends automatic notifications when a registered vehicle is recognized.",
       tech: ["Python", "OpenCV", "EasyOCR", "Twilio API"],
       github: "https://github.com/dhruvgithu/Automatic-number-plate-recognition",
     },
     {
+      category: "Full-Stack Development",
       title: "Expense Tracker",
       description: "A full-stack expense management application that helps users record daily expenses, organize transactions by category, and monitor spending through an interactive dashboard.",
       tech: ["Node.js", "Express", "React", "Vite"],
@@ -18,18 +20,21 @@ const Projects = () => {
       demo: "https://expense-tracker-sable-five-33.vercel.app",
     },
     {
+      category: "Machine Learning",
       title: "Multiple Disease Prediction System",
       description: "A web application that predicts diseases using machine learning models and user health data. The system provides quick predictions through a simple and user-friendly interface.",
       tech: ["Python", "Django", "TensorFlow", "Scikit-learn"],
       github: "https://github.com/dhruvgithu/multiple-disease-prediction-system",
     },
     {
+      category: "Generative AI & RAG",
       title: "RAG-Based Document Intelligence System",
       description: "Developed a RAG-based Document Intelligence System that allows users to upload PDFs. Used FAISS and OpenAI embeddings for accurate document retrieval and optimized processing of 50+ page documents with a chunking pipeline.",
       tech: ["Python", "LangChain", "FAISS", "OpenAI API", "Streamlit"],
       github: "https://github.com/dhruvgithu/RAG-Based-Document-Intelligence-System/tree/main/ai-document-qa-rag-main/ai-document-qa-rag-main",
     },
     {
+      category: "Data Science & Forecasting",
       title: "Sales Forecasting Using Predictive Analytics",
       description: "A machine learning project that predicts future sales based on historical data. It helps businesses understand trends and make better planning decisions.",
       tech: ["Python", "Django", "Scikit-learn", "Pandas", "NumPy"],
