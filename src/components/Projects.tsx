@@ -69,7 +69,7 @@ const Projects = () => {
               whileHover={{ y: -5, scale: 1.01 }}
               className="glass-strong p-8 rounded-[20px] group transition-all duration-300 cursor-default hover:shadow-md flex flex-col h-full"
             >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-foreground mb-2">
                 {project.category}
               </p>
               <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-all">
