@@ -42,17 +42,17 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
               </p>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 grid grid-cols-2 gap-3">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
                 onClick={() => onNavigate?.("projects")}
               >
                 View Projects
               </Button>
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
                 onClick={() => onNavigate?.("contact")}
               >
                 Get in Touch
