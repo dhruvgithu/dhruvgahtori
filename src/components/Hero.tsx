@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, FileText } from "lucide-react";
+import { BookOpen, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
 import SectionNav from "./SectionNav";
