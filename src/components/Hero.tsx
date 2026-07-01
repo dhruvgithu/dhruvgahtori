@@ -37,8 +37,8 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
             </div>
 
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
-            <p>
-                B.Tech Computer Science Graduate passionate about building intelligent systems and AI-powered applications. I enjoy solving complex problems and developing innovative solutions that address real world challenges and create meaningful impact.
+              <p>
+                B.Tech Computer Science Graduate passionate about building AI-powered applications and scalable solutions for real-world problems.
               </p>
             </div>
 
