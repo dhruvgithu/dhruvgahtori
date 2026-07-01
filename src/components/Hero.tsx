@@ -84,7 +84,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
                 </p>
                 <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10">
                   <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf">
-                    <FileText className="w-4 h-4 mr-1.5" />
+                    <Download className="w-4 h-4 mr-1.5" />
                     Download Resume
                   </a>
                 </Button>
