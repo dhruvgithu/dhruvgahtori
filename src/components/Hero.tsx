@@ -44,14 +44,14 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="mt-6 grid grid-cols-2 gap-3">
               <Button
-                size="default"
+                size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
                 onClick={() => onNavigate?.("projects")}
               >
                 View Projects
               </Button>
               <Button
-                size="default"
+                size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
                 onClick={() => onNavigate?.("contact")}
               >
