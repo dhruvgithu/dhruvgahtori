@@ -44,13 +44,13 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full sm:w-fit">
               <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-xl h-9 w-full sm:w-[160px] px-4 text-sm"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-xl h-10 w-full sm:w-[170px] px-5 text-sm"
                 onClick={() => onNavigate?.("projects")}
               >
                 View Projects
               </Button>
               <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-xl h-9 w-full sm:w-[160px] px-4 text-sm"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-xl h-10 w-full sm:w-[170px] px-5 text-sm"
                 onClick={() => onNavigate?.("contact")}
               >
                 Get in Touch
