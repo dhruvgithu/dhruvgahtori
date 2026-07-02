@@ -46,6 +46,13 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
               <Button
                 size="default"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
+                onClick={() => onNavigate?.("projects")}
+              >
+                View Projects
+              </Button>
+              <Button
+                size="default"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full"
                 onClick={() => onNavigate?.("contact")}
               >
                 Get in Touch
