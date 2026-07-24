@@ -3,6 +3,7 @@ import { BookOpen, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
 import SectionNav from "./SectionNav";
+import resumeAsset from "@/assets/DhruvGahtori_Resume.pdf.asset.json";
 import type { SectionKey } from "@/pages/Index";
 
 interface HeroProps {
@@ -80,13 +81,11 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
                 <p className="text-sm text-muted-foreground mb-4 flex-1">
                   Explore my projects, skills, and education everything I&apos;ve been working on.
                 </p>
-                <Button
-                  size="sm"
-                  disabled
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10"
-                >
-                  <Download className="w-4 h-4 mr-1.5" />
-                  Coming Soon
+                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10">
+                  <a href={resumeAsset.url} download="DhruvGahtori_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <Download className="w-4 h-4 mr-1.5" />
+                    Download Resume
+                  </a>
                 </Button>
               </div>
             </div>
