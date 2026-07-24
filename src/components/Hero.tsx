@@ -80,11 +80,13 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
                 <p className="text-sm text-muted-foreground mb-4 flex-1">
                   Explore my projects, skills, and education everything I&apos;ve been working on.
                 </p>
-                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10">
-                  <a href="/DhruvGahtori_Resume.pdf" download="DhruvGahtori_Resume.pdf">
-                    <Download className="w-4 h-4 mr-1.5" />
-                    Download Resume
-                  </a>
+                <Button
+                  size="sm"
+                  disabled
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10"
+                >
+                  <Download className="w-4 h-4 mr-1.5" />
+                  Coming Soon
                 </Button>
               </div>
             </div>
