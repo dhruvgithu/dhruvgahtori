@@ -3,6 +3,7 @@ import { BookOpen, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import ProfileSidebar from "./ProfileSidebar";
 import SectionNav from "./SectionNav";
+import resumeAsset from "@/assets/DhruvGahtori_Resume.pdf.asset.json";
 import type { SectionKey } from "@/pages/Index";
 
 interface HeroProps {
