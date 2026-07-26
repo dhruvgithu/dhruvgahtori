@@ -1,34 +1,35 @@
 import { motion } from "framer-motion";
-import { Code2, Brain, Wrench, Database } from "lucide-react";
 
 interface SkillsProps {
   hideHeader?: boolean;
 }
 
-const Skills = ({ hideHeader = false }: SkillsProps) => {
-  const skillCategories = [
-    {
-      title: "Programming Languages",
-      icon: Code2,
-      skills: ["Python", "C", "C++", "Java", "JavaScript"],
-    },
-    {
-      title: "AI / ML",
-      icon: Brain,
-      skills: ["TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "NLP", "FAISS", "LangChain"],
-    },
-    {
-      title: "Tools & Technologies",
-      icon: Wrench,
-      skills: ["Git", "GitHub", "Docker", "AWS", "Django", "Postman", "Jupyter Notebook", "Linux"],
-    },
-    {
-      title: "Databases",
-      icon: Database,
-      skills: ["MySQL", "MongoDB", "SQLite"],
-    },
-  ];
+const tech = [
+  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+  { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+  { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+  { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+  { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
+  { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+  { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+  { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "SQLite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
+  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+];
 
+const Skills = ({ hideHeader = false }: SkillsProps) => {
   return (
     <div id="skills" className={hideHeader ? "pb-2 relative" : "relative"}>
       <div className="w-full max-w-6xl mx-auto">
@@ -47,34 +48,19 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
           </motion.div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          {skillCategories.map((category, index) => (
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
+          {tech.map((t, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={t.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -3 }}
-              className="glass-strong p-8 rounded-[20px] transition-all duration-300 hover:shadow-md flex flex-col h-full"
+              transition={{ duration: 0.3, delay: i * 0.02 }}
+              whileHover={{ y: -4 }}
+              className="bg-background border border-border rounded-xl p-4 flex flex-col items-center justify-center gap-2 aspect-square hover:border-primary/40 hover:shadow-md transition-all"
             >
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <category.icon className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-bold text-foreground">
-                  {category.title}
-                </h3>
-              </div>
-              <ul className="space-y-2.5 pl-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <li
-                    key={skillIndex}
-                    className="flex items-center gap-3 text-foreground/85"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                    <span className="text-[15px]">{skill}</span>
-                  </li>
-                ))}
-              </ul>
+              <img src={t.icon} alt={t.name} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" loading="lazy" />
+              <span className="text-xs sm:text-sm font-semibold text-foreground text-center">{t.name}</span>
             </motion.div>
           ))}
         </div>
