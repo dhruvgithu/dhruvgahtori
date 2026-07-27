@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, TreePine, Send, Mail, MapPin, GraduationCap } from "lucide-react";
-import profilePhoto from "@/assets/dhruv-photo.jpg";
+import profilePhotoAsset from "@/assets/dhruv-memoji.png.asset.json";
+
+const profilePhoto = profilePhotoAsset.url;
 
 const ProfileSidebar = () => {
   const socialLinks = [
