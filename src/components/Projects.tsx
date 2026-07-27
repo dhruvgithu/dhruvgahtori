@@ -88,15 +88,15 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-2 flex-wrap mt-auto">
-                <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
+              <div className="flex gap-2 mt-auto">
+                <Button asChild size="sm" className="flex-1 sm:flex-none sm:w-[130px] bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-3 h-3 mr-1.5" />
                     GitHub
                   </a>
                 </Button>
                 {project.demo && (
-                  <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
+                  <Button asChild size="sm" className="flex-1 sm:flex-none sm:w-[130px] bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all text-xs">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-3 h-3 mr-1.5" />
                       Live Demo
