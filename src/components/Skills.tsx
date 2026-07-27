@@ -48,7 +48,7 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
           </motion.div>
         )}
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2.5 sm:gap-3">
           {tech.map((t, i) => (
             <motion.div
               key={t.name}
@@ -57,10 +57,10 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.02 }}
               whileHover={{ y: -4 }}
-              className="bg-background border border-border rounded-xl p-4 flex flex-col items-center justify-center gap-2 aspect-square hover:border-primary/40 hover:shadow-md transition-all"
+              className="bg-background border border-border rounded-lg p-2.5 flex flex-col items-center justify-center gap-1.5 aspect-square hover:border-primary/40 hover:shadow-md transition-all"
             >
-              <img src={t.icon} alt={t.name} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" loading="lazy" />
-              <span className="text-xs sm:text-sm font-semibold text-foreground text-center">{t.name}</span>
+              <img src={t.icon} alt={t.name} className="w-8 h-8 sm:w-9 sm:h-9 object-contain" loading="lazy" />
+              <span className="text-[11px] sm:text-xs font-semibold text-foreground text-center leading-tight">{t.name}</span>
             </motion.div>
           ))}
         </div>
