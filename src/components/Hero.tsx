@@ -67,7 +67,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
               <div className="w-full sm:max-w-[380px] bg-background border border-border rounded-xl p-5 flex flex-col">
                 <h3 className="text-base font-bold text-foreground mb-1">Articles</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Insights from real interviews, core fundamentals, and practical strategies for tech roles.
+                  Insights from real interviews, core fundamentals and practical strategies for tech roles.
                 </p>
                 <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-md w-full h-10">
                   <a href="https://medium.com/@dhruvgahtori00" target="_blank" rel="noopener noreferrer">
