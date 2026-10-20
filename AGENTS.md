@@ -1,0 +1,1 @@
+- Keep the portfolio's Experience navigation page as one section with internal Experience, Education, and Certifications tabs, matching the requested information architecture.
