@@ -1,0 +1,3 @@
+- [ ] Replace the Education navigation tab with Experience.
+- [ ] Add Experience, Education, and Certifications tabs inside the combined page, following the supplied reference while keeping the portfolio's light blue styling.
+- [ ] Verify the preview and confirm all three tabs switch correctly.
