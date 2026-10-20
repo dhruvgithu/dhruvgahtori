@@ -7,7 +7,7 @@ interface SectionNavProps {
 
 const navItems: { name: string; key: SectionKey }[] = [
   { name: "Home", key: "home" },
-  { name: "Education", key: "education" },
+  { name: "Experience", key: "experience" },
   { name: "Skills", key: "skills" },
   { name: "Projects", key: "projects" },
   { name: "Contact", key: "contact" },

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
-import Education from "@/components/Education";
+import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
@@ -9,7 +9,7 @@ import ProfileSidebar from "@/components/ProfileSidebar";
 import SectionNav from "@/components/SectionNav";
 import { AnimatePresence, motion } from "framer-motion";
 
-export type SectionKey = "home" | "education" | "skills" | "projects" | "contact";
+export type SectionKey = "home" | "experience" | "skills" | "projects" | "contact";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState<SectionKey>("home");
@@ -62,7 +62,7 @@ const Index = () => {
 
   const sections: Record<SectionKey, React.ReactNode> = {
     home: <Hero onNavigate={(s) => setActiveSection(s as SectionKey)} activeSection={activeSection} setActiveSection={setActiveSection} />,
-    education: wrapWithSidebar(<Education />),
+    experience: wrapWithSidebar(<Experience />),
     skills: wrapWithSidebar(skillsContent),
     projects: wrapWithSidebar(<Projects />),
     contact: wrapWithSidebar(<Contact />),

@@ -1,5 +1,32 @@
 import { motion } from "framer-motion";
-import { Briefcase, Brain, Globe, Eye } from "lucide-react";
+import { Award, BookOpen, Briefcase, Brain, ExternalLink, Eye, Globe, GraduationCap } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+const certifications = [
+  {
+    title: "Comprehensive Machine Learning with Python",
+    provider: "Udemy",
+    link: "https://www.udemy.com/certificate/UC-bff20b90-3a16-4cc0-865e-5d8e0310cf51/",
+  },
+  {
+    title: "End-to-End Programming with C, C++",
+    provider: "Udemy",
+    link: "https://www.udemy.com/certificate/UC-c0049745-1f60-4e8f-8679-5ccebdd7c0e2/",
+  },
+  {
+    title: "AWS Cloud Practitioner Essentials",
+    provider: "AWS Skill Builder",
+    link: "https://github.com/dhruvgithu/AWS-Cloud-Practitioner/blob/main/Dhruv%20Gahtori%20AWS%20Course%20Completion%20Certificate1.pdf",
+  },
+];
+
+const coursework = [
+  "Data Structures & Algorithms",
+  "Object-Oriented Programming",
+  "Database Management Systems",
+  "Operating Systems",
+  "Computer Networks",
+];
 
 const Experience = () => {
   const experiences = [
@@ -21,63 +48,95 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-8 relative w-full">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 font-display">
-            My <span className="gradient-text">Experience</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
-        </motion.div>
+    <section id="experience" className="relative w-full">
+      <motion.div
+        className="mb-7"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Professional Summary</h2>
+      </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="glass-strong p-6 rounded-2xl neon-border"
-          >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="bg-gradient-to-br from-primary to-secondary p-2.5 rounded-xl">
-                <Briefcase className="w-5 h-5 text-primary-foreground" />
+      <Tabs defaultValue="experience" className="w-full">
+        <TabsList className="flex h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b border-border bg-transparent p-0 text-muted-foreground">
+          <TabsTrigger value="experience" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Experience</TabsTrigger>
+          <TabsTrigger value="education" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Education</TabsTrigger>
+          <TabsTrigger value="certifications" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Certifications</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="experience" className="mt-6 focus-visible:ring-0">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="rounded-lg border border-border bg-background p-5 sm:p-6">
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <Briefcase className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-heading">AI/ML Project Developer</h3>
-                <p className="text-muted-foreground text-xs">Self Projects • Ongoing</p>
+                <h3 className="text-lg font-bold text-foreground">AI/ML Project Developer</h3>
+                <p className="text-sm text-muted-foreground">Self Projects · Ongoing</p>
               </div>
             </div>
-
-            <div className="space-y-4 ml-2 border-l-2 border-primary/20 pl-5">
+            <div className="space-y-5 border-l-2 border-primary/20 pl-5">
               {experiences.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="relative"
-                >
-                  <div className="absolute -left-[29px] top-1 w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary border-2 border-background" />
-                  <div className="flex items-start gap-2">
-                    <exp.icon className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                <motion.div key={exp.title} initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: index * 0.08 }} className="relative">
+                  <span className="absolute -left-[26px] top-1 h-3 w-3 rounded-full border-2 border-background bg-primary" />
+                  <div className="flex items-start gap-3">
+                    <exp.icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <div>
-                      <h4 className="font-bold font-heading text-sm mb-0.5">{exp.title}</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">{exp.description}</p>
+                      <h4 className="text-sm font-semibold text-foreground">{exp.title}</h4>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{exp.description}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        </div>
-      </div>
+        </TabsContent>
+
+        <TabsContent value="education" className="mt-6 focus-visible:ring-0">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="rounded-lg border border-border bg-background p-5 sm:p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <GraduationCap className="h-5 w-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="text-base font-bold leading-snug text-foreground sm:text-lg">Bachelor of Technology in Computer Science and Engineering</h3>
+                <p className="mt-1 text-sm font-semibold text-primary">Graphic Era Hill University</p>
+                <p className="mt-1 text-sm text-muted-foreground">September 2022 – June 2026</p>
+                <div className="mt-5 rounded-md bg-muted/50 p-4">
+                  <div className="mb-3 flex items-center gap-2">
+                    <BookOpen className="h-4 w-4 text-primary" />
+                    <h4 className="text-sm font-semibold text-foreground">Core Coursework</h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {coursework.map((course) => <span key={course} className="rounded-md border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground">{course}</span>)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </TabsContent>
+
+        <TabsContent value="certifications" className="mt-6 focus-visible:ring-0">
+          <div className="mb-4 flex items-center gap-2">
+            <Award className="h-5 w-5 text-primary" />
+            <h3 className="text-lg font-bold text-foreground">Certifications</h3>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {certifications.map((cert) => (
+              <a key={cert.title} href={cert.link} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-border bg-background p-4 transition-colors hover:border-primary/50 hover:bg-primary/5">
+                <div className="flex h-full items-start justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold leading-snug text-foreground">{cert.title}</p>
+                    <p className="mt-2 text-xs text-muted-foreground">{cert.provider}</p>
+                  </div>
+                  <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
     </section>
   );
 };
