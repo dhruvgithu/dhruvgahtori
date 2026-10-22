@@ -54,7 +54,7 @@ const ProfileSidebar = () => {
         </div>
 
         <a
-          href="https://www.google.com/maps/search/?api=1&query=Champawat%2C%20Uttarakhand%2C%20India"
+          href="https://www.google.com/maps/search/?api=1&query=Noida%2C%20Uttar%20Pradesh%2C%20India"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 group"
@@ -64,7 +64,7 @@ const ProfileSidebar = () => {
           </div>
           <div className="text-left min-w-0">
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Location</p>
-            <p className="text-sm text-foreground group-hover:text-primary transition-colors">Uttarakhand, India</p>
+            <p className="text-sm text-foreground group-hover:text-primary transition-colors">Noida, Uttar Pradesh, India</p>
           </div>
         </a>
       </div>
