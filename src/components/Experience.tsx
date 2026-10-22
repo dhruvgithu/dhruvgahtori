@@ -98,26 +98,6 @@ const Experience = () => {
             </div>
           </motion.div>
         </TabsContent>
-
-        <TabsContent value="certifications" className="mt-6 focus-visible:ring-0">
-          <div className="mb-4 flex items-center gap-2">
-            <Award className="h-5 w-5 text-primary" />
-            <h3 className="text-lg font-bold text-foreground">Certifications</h3>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {certifications.map((cert) => (
-              <a key={cert.title} href={cert.link} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-border bg-background p-4 transition-colors hover:border-primary/50 hover:bg-primary/5">
-                <div className="flex h-full items-start justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-semibold leading-snug text-foreground">{cert.title}</p>
-                    <p className="mt-2 text-xs text-muted-foreground">{cert.provider}</p>
-                  </div>
-                  <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
-                </div>
-              </a>
-            ))}
-          </div>
-        </TabsContent>
       </Tabs>
     </section>
   );
