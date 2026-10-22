@@ -44,7 +44,6 @@ const Experience = () => {
         <TabsList className="flex h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b border-border bg-transparent p-0 text-muted-foreground">
           <TabsTrigger value="experience" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Experience</TabsTrigger>
           <TabsTrigger value="education" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Education</TabsTrigger>
-          <TabsTrigger value="certifications" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Certifications</TabsTrigger>
         </TabsList>
 
         <TabsContent value="experience" className="mt-6 focus-visible:ring-0">
