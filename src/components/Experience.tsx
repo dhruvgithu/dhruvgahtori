@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Briefcase, Brain, ExternalLink, Eye, Globe, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, Brain, Eye, Globe, GraduationCap } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const certifications = [
-  {
-    title: "Comprehensive Machine Learning with Python",
-    provider: "Udemy",
-    link: "https://www.udemy.com/certificate/UC-bff20b90-3a16-4cc0-865e-5d8e0310cf51/",
-  },
-  {
-    title: "End-to-End Programming with C, C++",
-    provider: "Udemy",
-    link: "https://www.udemy.com/certificate/UC-c0049745-1f60-4e8f-8679-5ccebdd7c0e2/",
-  },
-  {
-    title: "AWS Cloud Practitioner Essentials",
-    provider: "AWS Skill Builder",
-    link: "https://github.com/dhruvgithu/AWS-Cloud-Practitioner/blob/main/Dhruv%20Gahtori%20AWS%20Course%20Completion%20Certificate1.pdf",
-  },
-];
 
 const coursework = [
   "Data Structures & Algorithms",
@@ -62,7 +44,6 @@ const Experience = () => {
         <TabsList className="flex h-auto w-full justify-start gap-2 overflow-x-auto rounded-none border-b border-border bg-transparent p-0 text-muted-foreground">
           <TabsTrigger value="experience" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Experience</TabsTrigger>
           <TabsTrigger value="education" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Education</TabsTrigger>
-          <TabsTrigger value="certifications" className="h-12 rounded-none border-b-2 border-transparent bg-transparent px-4 text-sm font-medium data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none">Certifications</TabsTrigger>
         </TabsList>
 
         <TabsContent value="experience" className="mt-6 focus-visible:ring-0">
@@ -116,26 +97,6 @@ const Experience = () => {
               </div>
             </div>
           </motion.div>
-        </TabsContent>
-
-        <TabsContent value="certifications" className="mt-6 focus-visible:ring-0">
-          <div className="mb-4 flex items-center gap-2">
-            <Award className="h-5 w-5 text-primary" />
-            <h3 className="text-lg font-bold text-foreground">Certifications</h3>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {certifications.map((cert) => (
-              <a key={cert.title} href={cert.link} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-border bg-background p-4 transition-colors hover:border-primary/50 hover:bg-primary/5">
-                <div className="flex h-full items-start justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-semibold leading-snug text-foreground">{cert.title}</p>
-                    <p className="mt-2 text-xs text-muted-foreground">{cert.provider}</p>
-                  </div>
-                  <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
-                </div>
-              </a>
-            ))}
-          </div>
         </TabsContent>
       </Tabs>
     </section>
