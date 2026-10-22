@@ -72,8 +72,8 @@ const Experience = () => {
                 <Briefcase className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-foreground">AI/ML Project Developer</h3>
-                <p className="text-sm text-muted-foreground">Self Projects · Ongoing</p>
+                <h3 className="text-lg font-bold text-foreground">Graduate Engineer Trainee (GET)</h3>
+                <p className="text-sm text-muted-foreground">HCLTech</p>
               </div>
             </div>
             <div className="space-y-5 border-l-2 border-primary/20 pl-5">
