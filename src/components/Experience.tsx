@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
-import { Award, BookOpen, Briefcase, Brain, ExternalLink, Eye, Globe, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, Brain, Eye, Globe, GraduationCap } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const certifications = [
-  {
-    title: "Comprehensive Machine Learning with Python",
-    provider: "Udemy",
-    link: "https://www.udemy.com/certificate/UC-bff20b90-3a16-4cc0-865e-5d8e0310cf51/",
-  },
-  {
-    title: "End-to-End Programming with C, C++",
-    provider: "Udemy",
-    link: "https://www.udemy.com/certificate/UC-c0049745-1f60-4e8f-8679-5ccebdd7c0e2/",
-  },
-  {
-    title: "AWS Cloud Practitioner Essentials",
-    provider: "AWS Skill Builder",
-    link: "https://github.com/dhruvgithu/AWS-Cloud-Practitioner/blob/main/Dhruv%20Gahtori%20AWS%20Course%20Completion%20Certificate1.pdf",
-  },
-];
 
 const coursework = [
   "Data Structures & Algorithms",
