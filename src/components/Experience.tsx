@@ -102,7 +102,8 @@ const Experience = () => {
               <div className="min-w-0 flex-1">
                 <h3 className="text-base font-bold leading-snug text-foreground sm:text-lg">Bachelor of Technology in Computer Science and Engineering</h3>
                 <p className="mt-1 text-sm font-semibold text-primary">Graphic Era Hill University</p>
-                <p className="mt-1 text-sm text-muted-foreground">September 2022 – June 2026</p>
+                <p className="mt-1 text-sm text-muted-foreground">Noida, Uttar Pradesh, India · September 2022 – June 2026</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Passed all semesters with full credit score, maintaining consistent academic performance throughout the program.</p>
                 <div className="mt-5 rounded-md bg-muted/50 p-4">
                   <div className="mb-3 flex items-center gap-2">
                     <BookOpen className="h-4 w-4 text-primary" />
