@@ -3,7 +3,7 @@ import { BookOpen, Briefcase, Brain, Eye, Globe, GraduationCap } from "lucide-re
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const coursework = [
-  "Cyber Security",
+  "Cybersecurity",
   "Object-Oriented Programming",
   "Database Management Systems",
   "Operating Systems",
