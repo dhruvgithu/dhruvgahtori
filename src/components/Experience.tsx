@@ -11,23 +11,6 @@ const coursework = [
 ];
 
 const Experience = () => {
-  const experiences = [
-    {
-      icon: Brain,
-      title: "Machine Learning Model Development",
-      description: "Designed and trained ML models for classification, regression, and prediction tasks using Scikit-learn, TensorFlow, and Keras.",
-    },
-    {
-      icon: Globe,
-      title: "Disease Prediction Web Application",
-      description: "Built a Django-based web application that predicts multiple diseases with high accuracy and under 2-second response time.",
-    },
-    {
-      icon: Eye,
-      title: "Computer Vision Projects",
-      description: "Developed real-time computer vision applications including Automatic Number Plate Recognition using OpenCV and OCR.",
-    },
-  ];
 
   return (
     <section id="experience" className="relative w-full">
