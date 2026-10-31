@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BookOpen, Briefcase, Brain, Eye, Globe, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, GraduationCap } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const coursework = [
