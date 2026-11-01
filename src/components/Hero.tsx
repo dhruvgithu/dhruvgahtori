@@ -39,7 +39,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
               <p>
-                B.Tech Computer Science Graduate passionate about building AI-powered applications and scalable solutions for real-world problems.
+                Graduate Engineer Trainee at HCLTech, passionate about Cybersecurity, Information Security, and Networking. Enthusiastic about exploring emerging technologies and building secure, scalable solutions.
               </p>
             </div>
 
