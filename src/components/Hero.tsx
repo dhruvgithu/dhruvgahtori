@@ -39,7 +39,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
               <p>
-                Graduate Engineer Trainee at HCLTech, passionate about Cybersecurity, Information Security, and Networking. Enthusiastic about exploring emerging technologies and building secure, scalable solutions.
+                Driven by a passion for Cybersecurity, Information Security, and Networking, with a keen interest in emerging technologies and developing secure, scalable solutions to real-world challenges.
               </p>
             </div>
 
