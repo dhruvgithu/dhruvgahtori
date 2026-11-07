@@ -18,6 +18,17 @@
     --primary: 217 91% 53%;
     --primary-foreground: 0 0% 100%;
 
+    --skill-blue: 217 91% 53%;
+    --skill-cyan: 199 89% 44%;
+    --skill-orange: 25 95% 48%;
+    --skill-violet: 262 83% 58%;
+    --skill-green: 142 71% 35%;
+    --skill-red: 0 72% 50%;
+    --skill-teal: 173 80% 32%;
+    --skill-amber: 38 92% 42%;
+    --skill-indigo: 239 68% 55%;
+    --skill-charcoal: 220 20% 18%;
+
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 20% 15%;
 
@@ -60,6 +71,19 @@
     --sidebar-accent-foreground: 220 20% 15%;
     --sidebar-border: 220 13% 90%;
     --sidebar-ring: 217 91% 53%;
+  }
+
+  .dark {
+    --skill-blue: 217 91% 68%;
+    --skill-cyan: 199 89% 64%;
+    --skill-orange: 25 95% 62%;
+    --skill-violet: 262 83% 72%;
+    --skill-green: 142 71% 55%;
+    --skill-red: 0 72% 66%;
+    --skill-teal: 173 80% 52%;
+    --skill-amber: 38 92% 62%;
+    --skill-indigo: 239 68% 72%;
+    --skill-charcoal: 220 20% 82%;
   }
 }
 

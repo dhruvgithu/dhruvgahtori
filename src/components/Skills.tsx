@@ -21,22 +21,22 @@ interface SkillsProps {
 }
 
 const tech = [
-  { name: "GRC", icon: ShieldCheck },
-  { name: "ISO 27001", icon: Shield },
-  { name: "Risk Management", icon: Scale },
-  { name: "Risk Assessment", icon: SearchCheck },
-  { name: "IT Audit", icon: ClipboardCheck },
-  { name: "IT Compliance", icon: BadgeCheck },
-  { name: "Information Security", icon: LockKeyhole },
-  { name: "Risk Analysis", icon: ShieldAlert },
-  { name: "Internal Controls", icon: ListChecks },
-  { name: "Control Testing", icon: FileCheck2 },
-  { name: "Policy Documentation", icon: FileText },
-  { name: "Risk Mitigation", icon: ShieldCheck },
-  { name: "GDPR", icon: Globe2 },
-  { name: "SOC 2", icon: BadgeCheck },
-  { name: "IT Governance", icon: Landmark },
-  { name: "GitHub", icon: Github },
+  { name: "GRC", icon: ShieldCheck, color: "text-skill-blue" },
+  { name: "ISO 27001", icon: Shield, color: "text-skill-cyan" },
+  { name: "Risk Management", icon: Scale, color: "text-skill-orange" },
+  { name: "Risk Assessment", icon: SearchCheck, color: "text-skill-violet" },
+  { name: "IT Audit", icon: ClipboardCheck, color: "text-skill-green" },
+  { name: "IT Compliance", icon: BadgeCheck, color: "text-skill-red" },
+  { name: "Information Security", icon: LockKeyhole, color: "text-skill-teal" },
+  { name: "Risk Analysis", icon: ShieldAlert, color: "text-skill-amber" },
+  { name: "Internal Controls", icon: ListChecks, color: "text-skill-indigo" },
+  { name: "Control Testing", icon: FileCheck2, color: "text-skill-blue" },
+  { name: "Policy Documentation", icon: FileText, color: "text-skill-orange" },
+  { name: "Risk Mitigation", icon: ShieldCheck, color: "text-skill-green" },
+  { name: "GDPR", icon: Globe2, color: "text-skill-cyan" },
+  { name: "SOC 2", icon: BadgeCheck, color: "text-skill-violet" },
+  { name: "IT Governance", icon: Landmark, color: "text-skill-amber" },
+  { name: "GitHub", icon: Github, color: "text-skill-charcoal" },
 ];
 
 const Skills = ({ hideHeader = false }: SkillsProps) => {
@@ -69,7 +69,7 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               whileHover={{ y: -4 }}
               className="bg-background border border-border rounded-lg p-2.5 flex flex-col items-center justify-center gap-1.5 aspect-square hover:border-primary/40 hover:shadow-md transition-all"
             >
-              <t.icon aria-hidden="true" className="w-8 h-8 sm:w-9 sm:h-9 text-primary" strokeWidth={1.7} />
+              <t.icon aria-hidden="true" className={`w-8 h-8 sm:w-9 sm:h-9 ${t.color}`} strokeWidth={1.7} />
               <span className="text-[11px] sm:text-xs font-semibold text-foreground text-center leading-tight">{t.name}</span>
             </motion.div>
           ))}
