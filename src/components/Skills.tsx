@@ -1,30 +1,42 @@
 import { motion } from "framer-motion";
+import {
+  BadgeCheck,
+  ClipboardCheck,
+  FileCheck2,
+  FileText,
+  Github,
+  Globe2,
+  Landmark,
+  ListChecks,
+  LockKeyhole,
+  Scale,
+  SearchCheck,
+  Shield,
+  ShieldAlert,
+  ShieldCheck,
+} from "lucide-react";
 
 interface SkillsProps {
   hideHeader?: boolean;
 }
 
 const tech = [
-  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  
-  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { name: "LangChain", icon: "https://cdn.simpleicons.org/langchain" },
-  { name: "Scikit-Learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
-  { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-  { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-  { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
-  { name: "Jupyter Notebook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-  { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
-  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "GRC", icon: ShieldCheck },
+  { name: "ISO 27001", icon: Shield },
+  { name: "Risk Management", icon: Scale },
+  { name: "Risk Assessment", icon: SearchCheck },
+  { name: "IT Audit", icon: ClipboardCheck },
+  { name: "IT Compliance", icon: BadgeCheck },
+  { name: "Information Security", icon: LockKeyhole },
+  { name: "Risk Analysis", icon: ShieldAlert },
+  { name: "Internal Controls", icon: ListChecks },
+  { name: "Control Testing", icon: FileCheck2 },
+  { name: "Policy Documentation", icon: FileText },
+  { name: "Risk Mitigation", icon: ShieldCheck },
+  { name: "GDPR", icon: Globe2 },
+  { name: "SOC 2", icon: BadgeCheck },
+  { name: "IT Governance", icon: Landmark },
+  { name: "GitHub", icon: Github },
 ];
 
 const Skills = ({ hideHeader = false }: SkillsProps) => {
@@ -57,7 +69,7 @@ const Skills = ({ hideHeader = false }: SkillsProps) => {
               whileHover={{ y: -4 }}
               className="bg-background border border-border rounded-lg p-2.5 flex flex-col items-center justify-center gap-1.5 aspect-square hover:border-primary/40 hover:shadow-md transition-all"
             >
-              <img src={t.icon} alt={t.name} className="w-8 h-8 sm:w-9 sm:h-9 object-contain" loading="lazy" />
+              <t.icon aria-hidden="true" className="w-8 h-8 sm:w-9 sm:h-9 text-primary" strokeWidth={1.7} />
               <span className="text-[11px] sm:text-xs font-semibold text-foreground text-center leading-tight">{t.name}</span>
             </motion.div>
           ))}
