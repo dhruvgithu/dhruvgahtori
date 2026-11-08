@@ -28,6 +28,18 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        skill: {
+          blue: "hsl(var(--skill-blue))",
+          cyan: "hsl(var(--skill-cyan))",
+          orange: "hsl(var(--skill-orange))",
+          violet: "hsl(var(--skill-violet))",
+          green: "hsl(var(--skill-green))",
+          red: "hsl(var(--skill-red))",
+          teal: "hsl(var(--skill-teal))",
+          amber: "hsl(var(--skill-amber))",
+          indigo: "hsl(var(--skill-indigo))",
+          charcoal: "hsl(var(--skill-charcoal))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
