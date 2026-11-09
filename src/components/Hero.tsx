@@ -39,7 +39,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="space-y-4 text-sm md:text-base text-foreground font-medium leading-relaxed">
               <p>
-                Passionate about Cybersecurity, Information Security, and Networking, with a focus on emerging technologies and secure, scalable solutions.
+                Building expertise in Cybersecurity, Information Security, and GRC, with an interest in risk management, security assessments, and compliance frameworks.
               </p>
             </div>
 
