@@ -37,7 +37,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
               <div className="mt-2 h-1 w-16 bg-primary rounded-full" />
             </div>
 
-            <div className="space-y-4 text-sm md:text-base text-foreground font-medium leading-relaxed">
+            <div className="space-y-4 text-justify [text-align-last:justify] text-sm md:text-base text-foreground font-medium leading-relaxed">
               <p>
                 Building expertise in Cybersecurity, Information Security, and GRC, with an interest in risk management, security assessments, and compliance frameworks.
               </p>
