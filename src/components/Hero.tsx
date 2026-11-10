@@ -39,7 +39,7 @@ const Hero = ({ onNavigate, activeSection, setActiveSection }: HeroProps) => {
 
             <div className="space-y-4 text-justify [text-align-last:justify] text-sm md:text-base text-foreground font-medium leading-relaxed">
               <p>
-                I’m passionate about cybersecurity and GRC, with a growing focus on risk assessment, security audits, and compliance.
+                Building expertise in Cybersecurity and GRC, with a focus on risk assessment, security audits, and compliance practices.
               </p>
             </div>
 
