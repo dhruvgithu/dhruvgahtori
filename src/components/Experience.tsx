@@ -37,7 +37,10 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground">Graduate Engineer Trainee (GET)</h3>
-                <p className="text-sm text-muted-foreground">HCLTech</p>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <p className="text-base font-bold text-foreground sm:text-lg">HCLTech</p>
+                  <p className="text-sm text-muted-foreground">October 2026 – Present</p>
+                </div>
               </div>
             </div>
           </motion.div>
