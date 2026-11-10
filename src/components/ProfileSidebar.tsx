@@ -24,9 +24,8 @@ const ProfileSidebar = () => {
           <img src={profilePhoto} alt="Dhruv Gahtori" className="w-full h-full object-cover" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">Dhruv Gahtori</h2>
-        <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 border border-border rounded-full text-sm font-semibold text-foreground">
-          <span className="w-2.5 h-2.5 rounded-full bg-green-700" />
-          Available for opportunities
+        <div className="mt-3 inline-flex items-center px-3 py-1.5 border border-border rounded-full text-sm font-semibold text-foreground">
+          Think. Build. Innovate.
         </div>
       </div>
 
