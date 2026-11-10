@@ -35,12 +35,12 @@ const Experience = () => {
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                 <Briefcase className="h-5 w-5" />
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-foreground">Graduate Engineer Trainee (GET)</h3>
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <p className="text-base font-bold text-foreground sm:text-lg">HCLTech</p>
-                  <p className="text-sm text-muted-foreground">October 2026 – Present</p>
+              <div className="flex min-w-0 flex-1 items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <h3 className="text-lg font-bold text-foreground">HCLTech</h3>
+                  <p className="mt-1 text-sm font-medium text-muted-foreground">Graduate Engineer Trainee (GET)</p>
                 </div>
+                <p className="shrink-0 text-right text-sm text-muted-foreground">October 2026 – Present</p>
               </div>
             </div>
           </motion.div>
